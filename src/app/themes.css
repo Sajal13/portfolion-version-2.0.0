@@ -1,0 +1,14 @@
+:root{
+  --color-light-primary: #ff7a57;
+  --color-light-secondary: #495057;
+  --color-light-tertiary: #f8f9fa;
+  --color-dark-primary: #0c151a;
+  --color-dark-secondary: #f2f2f2;
+  --color-dark-tertiary: #2eb7f5;
+  --color-success: #4CD964;
+
+}
+
+.dark {
+  background: var(--color-dark-primary);
+}
