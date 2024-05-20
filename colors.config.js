@@ -5,5 +5,6 @@ export const colors = {
   darkPrimary: 'var(--color-dark-primary)',
   darkSecondary: 'var(--color-dark-secondary)',
   darkTertiary: 'var(--color-dark-tertiary)',
-  success: 'var(--color-success)'
+  success: 'var(--color-success)',
+  tertiary: 'var(--color-tertiary)'
 }

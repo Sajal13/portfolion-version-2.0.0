@@ -23,10 +23,10 @@ export default function Home() {
             </p>
 
             <div className="mt-6 flex items-center">
-              <button className="uppercase  text-white font-bold bg-lightPrimary border border-lightPrimary dark:bg-transparent dark:border-lightPrimary dark:hover:bg-lightPrimary transition-all duration-200 ease-linear rounded-[3.125rem] px-4 py-2.5 inline-block leading-[21px] mr-2">
+              <button className="uppercase  text-white font-bold bg-lightPrimary border border-lightPrimary dark:bg-transparent dark:border-tertiary hover:bg-lightPrimary dark:hover:bg-tertiary transition-all duration-200 ease-linear rounded-[3.125rem] px-4 py-2.5 inline-block leading-[21px] mr-2">
                 Hire Me
               </button>
-              <button className="uppercase  text-white font-bold bg-darkPrimary border border-darkPrimary dark:bg-lightPrimary dark:border-lightPrimary transition-all duration-200 ease-linear rounded-[3.125rem] px-4 py-2.5 inline-block leading-[21px]">
+              <button className="uppercase  text-white font-bold bg-tertiary border border-tertiary dark:bg-lightPrimary dark:border-lightPrimary transition-all duration-200 ease-linear rounded-[3.125rem] px-4 py-2.5 inline-block leading-[21px]">
                 Download CV
               </button>
             </div>
@@ -34,25 +34,25 @@ export default function Home() {
             <div className="flex gap-3 items-center mt-6">
               <Link
                 href="#"
-                className="text-[22px] p-1.5 text-lightPrimary bg-transparent border border-lightPrimary hover:bg-lightPrimary transition-all duration-200 ease-linear hover:text-white rounded-full"
+                className="text-[22px] p-1.5 text-lightPrimary dark:text-tertiary bg-transparent border border-lightPrimary dark:border-tertiary hover:bg-lightPrimary dark:hover:bg-tertiary transition-all duration-200 ease-linear hover:text-white dark:hover:text-white rounded-full"
               >
                 <FaFacebookF />
               </Link>
               <Link
                 href="#"
-                className="text-[22px] p-1.5 text-lightPrimary bg-transparent border border-lightPrimary hover:bg-lightPrimary transition-all duration-200 ease-linear hover:text-white rounded-full"
+                className="text-[22px] p-1.5 text-lightPrimary dark:text-tertiary bg-transparent border border-lightPrimary dark:border-tertiary hover:bg-lightPrimary dark:hover:bg-tertiary transition-all duration-200 ease-linear hover:text-white dark:hover:text-white rounded-full"
               >
                 <RiLinkedinFill />
               </Link>
               <Link
                 href="#"
-                className="text-[22px] p-1.5 text-lightPrimary bg-transparent border border-lightPrimary hover:bg-lightPrimary transition-all duration-200 ease-linear hover:text-white rounded-full"
+                className="text-[22px] p-1.5 text-lightPrimary dark:text-tertiary bg-transparent border border-lightPrimary dark:border-tertiary hover:bg-lightPrimary dark:hover:bg-tertiary transition-all duration-200 ease-linear hover:text-white dark:hover:text-white rounded-full"
               >
                 <RiInstagramFill />
               </Link>
               <Link
                 href="#"
-                className="text-[22px] p-1.5 text-lightPrimary bg-transparent border border-lightPrimary hover:bg-lightPrimary transition-all duration-200 ease-linear hover:text-white rounded-full"
+                className="text-[22px] p-1.5 text-lightPrimary dark:text-tertiary bg-transparent border border-lightPrimary dark:border-tertiary hover:bg-lightPrimary dark:hover:bg-tertiary transition-all duration-200 ease-linear hover:text-white dark:hover:text-white rounded-full"
               >
                 <FaGithubAlt />
               </Link>
@@ -63,24 +63,36 @@ export default function Home() {
             <img
               src="/assets/images/illustration/man.svg"
               alt=""
-              className="-mb-[1px]"
+              className="-mb-[1px] dark:drop-shadow-[0px_0px_30px_rgba(173,189,189,0.5)] transition-all duration-300 ease-linear"
             />
           </div>
         </div>
       </section>
       <section className="max-w-[40.625rem] w-[95%] mx-auto flex border border-[#dee2e6] py-5 relative z-20 -mt-[3.5rem] mb-3 bg-white dark:bg-darkPrimary shadow-[0px_0px_30px_rgba(173,189,189,0.4)] rounded-[3.125rem]">
-          <div className="text-center border-r border-r-[#dee2e6] w-full">
-            <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary">14</h2>
-            <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm leading-[1.5] tracking-[0.6px]">Project Completed</p>
-          </div>
-          <div className="text-center border-r border-r-[#dee2e6] w-full">
-            <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary">2</h2>
-            <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm leading-[1.5] tracking-[0.6px]">Years of Experience</p>
-          </div>
-          <div className="text-center w-full">
-            <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary">4</h2>
-            <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm leading-[1.5] tracking-[0.6px]">Happy Clients</p>
-          </div>
+        <div className="text-center border-r border-r-[#dee2e6] w-full">
+          <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary">
+            14
+          </h2>
+          <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm leading-[1.5] tracking-[0.6px]">
+            Project Completed
+          </p>
+        </div>
+        <div className="text-center border-r border-r-[#dee2e6] w-full">
+          <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary">
+            2
+          </h2>
+          <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm leading-[1.5] tracking-[0.6px]">
+            Years of Experience
+          </p>
+        </div>
+        <div className="text-center w-full">
+          <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary">
+            4
+          </h2>
+          <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm leading-[1.5] tracking-[0.6px]">
+            Happy Clients
+          </p>
+        </div>
       </section>
     </main>
   );

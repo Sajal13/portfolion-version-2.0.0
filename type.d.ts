@@ -1,5 +1,14 @@
-interface NavItems  {
+interface Timelines {
+  id: number;
+  title: string;
+  duration: string;
+  description: string;
+  type: number
+}
+
+interface Service {
   id: number,
-  label: string,
-  link: string,
+  title: string;
+  description: string;
+  imageSrc: string;
 }
