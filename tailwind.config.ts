@@ -12,6 +12,19 @@ const config: Config = {
     extend: {
       colors: { ...colors },
     },
+    keyframes: {
+      slideup: {
+        '0%': {
+          bottom: '0%',
+        },
+        '100%': {
+          bottom: '110%'
+        }
+      }
+    },
+    animation: {
+      slideup: "slideup 10s linear infinite"
+    },
     container: {
       center: true,
       padding: {

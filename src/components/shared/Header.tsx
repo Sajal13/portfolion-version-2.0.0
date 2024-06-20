@@ -20,6 +20,9 @@ const Header = (props: Props) => {
 
   const { theme, setTheme } = useTheme();
 
+  const [mounted, setMounted] = useState(false);
+
+
   const handleMenuClose = () => {
     setIsOpen(!isOpen);
   };
@@ -39,6 +42,14 @@ const Header = (props: Props) => {
     });
     return () => resizer;
   }, [isOpen]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Fragment>

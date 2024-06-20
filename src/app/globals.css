@@ -13,3 +13,104 @@ body {
   }
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("/assets/images/icons/select_arrow.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  margin-right: 2rem;
+  padding: 1rem;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Initial state */
+.hover-in-top, .hover-in-right, .hover-in-bottom, .hover-in-left,
+.hover-out-top, .hover-out-right, .hover-out-bottom, .hover-out-left {
+  opacity: 0;
+}
+
+/* Mouse enter animations */
+.hover-in-top {
+  animation: slide-in-top 0.3s forwards, fade-in 0.3s forwards;
+}
+.hover-in-right {
+  animation: slide-in-right 0.3s forwards, fade-in 0.3s forwards;
+}
+.hover-in-bottom {
+  animation: slide-in-bottom 0.3s forwards, fade-in 0.3s forwards;
+}
+.hover-in-left {
+  animation: slide-in-left 0.3s forwards, fade-in 0.3s forwards;
+}
+
+/* Mouse leave animations */
+.hover-out-top {
+  animation: slide-out-top 0.3s forwards, fade-out 0.3s forwards;
+}
+.hover-out-right {
+  animation: slide-out-right 0.3s forwards, fade-out 0.3s forwards;
+}
+.hover-out-bottom {
+  animation: slide-out-bottom 0.3s forwards, fade-out 0.3s forwards;
+}
+.hover-out-left {
+  animation: slide-out-left 0.3s forwards, fade-out 0.3s forwards;
+}
+
+/* Sliding animations */
+@keyframes slide-in-top {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+@keyframes slide-in-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+@keyframes slide-in-bottom {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+@keyframes slide-in-left {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+@keyframes slide-out-top {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+@keyframes slide-out-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+@keyframes slide-out-bottom {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+@keyframes slide-out-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Opacity animations */
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

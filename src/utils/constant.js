@@ -41,7 +41,7 @@ export const navItems = [
   {
     id: 3,
     label: "Protfolio",
-    link: "#",
+    link: "/portfolio",
     icon: <TbBriefcase />,
   },
   {

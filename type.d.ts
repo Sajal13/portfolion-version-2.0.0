@@ -3,12 +3,34 @@ interface Timelines {
   title: string;
   duration: string;
   description: string;
-  type: number
+  type: number;
 }
 
 interface Service {
-  id: number,
+  id: number;
   title: string;
   description: string;
   imageSrc: string;
+}
+
+interface Images {
+  id: string;
+  imageSrc: string;
+}
+
+interface Description {
+  id: string;
+  text: string;
+}
+
+interface PortfolioItem {
+  id: string;
+  category: Array<string>;
+  title: string;
+  thumbnail: string;
+  images: Array<Images>;
+  projectTitle: string;
+  language: Array<string>;
+  description: Array<Description>;
+  link: string;
 }
