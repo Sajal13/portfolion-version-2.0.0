@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { SiMinutemailer } from "react-icons/si";
 
+import axios from "axios";
 import * as yup from "yup";
 import { useFormik } from "formik";
 
@@ -16,21 +17,46 @@ const Form = (props: Props) => {
       .string()
       .email("Email must be a valid email.")
       .required("Email is required."),
+    subject: yup.string().required("Subject is required."),
     message: yup.string().required("Message is required."),
   });
-  const { values, handleChange, handleBlur, handleSubmit, resetForm, errors } =
-    useFormik({
-      initialValues: {
-        name: "",
-        email: "",
-        message: "",
-      },
-      onSubmit: (value) => {
-        console.log(value);
-        resetForm();
-      },
-      validationSchema: schema,
-    });
+  const {
+    values,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    resetForm,
+    errors,
+    touched,
+  } = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+    onSubmit: async (value) => {
+      const data = {
+        name: value.name,
+        email: value.email,
+        subject: value.subject,
+        message: `${value.name}: ${value.message}`,
+      };
+      const response = await axios.post(
+        "/api",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      console.log(response);
+      resetForm();
+    },
+    validationSchema: schema,
+  });
 
   const handleFormSubmit = (e: any) => {
     e.preventDefault();
@@ -41,7 +67,7 @@ const Form = (props: Props) => {
       setTimeout(() => {
         buttonRef.current?.classList.remove("translate-x-64");
         buttonRef.current?.classList.add("translate-x-0");
-        buttonRef.current?.classList.remove('rotate-[25deg]');
+        buttonRef.current?.classList.remove("rotate-[25deg]");
       }, 5000);
     }
   };
@@ -66,13 +92,13 @@ const Form = (props: Props) => {
           outline-none rounded-lg focus:shadow-[0px_0px_0px_3px_rgba(255,122,87,0.25)] dark:focus:shadow-[0px_0px_0px_3px_rgba(8,_112,_184,_0.5)] 
           focus:border-[#ffdfd7] dark:focus:border-[rgba(8,_112,_184,_0.5)]
           ${
-            errors.name != null
+            errors.name != null && touched.name
               ? "text-red-500 border-red-500 dark:border-red-500"
               : "text-lightSecondary dark:text-darkSecondary border-[#ced4da]"
           }`}
           placeholder="Enter your name..."
         />
-        {errors.name != null ? (
+        {errors.name != null && touched.name ? (
           <span className="py-2 text-red-500">{errors.name}</span>
         ) : (
           <span className="py-2"></span>
@@ -96,14 +122,44 @@ const Form = (props: Props) => {
           outline-none rounded-lg focus:shadow-[0px_0px_0px_3px_rgba(255,122,87,0.25)] dark:focus:shadow-[0px_0px_0px_3px_rgba(8,_112,_184,_0.5)] 
           focus:border-[#ffdfd7] dark:focus:border-[rgba(8,_112,_184,_0.5)]
           ${
-            errors.email != null
+            errors.email != null && touched.email
               ? "text-red-500 border-red-500 dark:border-red-500"
               : "text-lightSecondary dark:text-darkSecondary border-[#ced4da]"
           }`}
           placeholder="Enter your email address..."
         />
-        {errors.email != null ? (
+        {errors.email != null && touched.email ? (
           <span className="py-2 text-red-500">{errors.email}</span>
+        ) : (
+          <span className="py-2"></span>
+        )}
+      </div>
+      <div className="mb-2 lg:mb-3">
+        <label
+          htmlFor="subject"
+          className=" lg:text-lg font-medium text-lightSecondary dark:text-darkSecondary mb-3 block"
+        >
+          Subject
+        </label>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.subject}
+          className={`w-full block px-5 py-3 bg-white dark:bg-[#393E56]/50 border  dark:border-[#393E56]  
+          outline-none rounded-lg focus:shadow-[0px_0px_0px_3px_rgba(255,122,87,0.25)] dark:focus:shadow-[0px_0px_0px_3px_rgba(8,_112,_184,_0.5)] 
+          focus:border-[#ffdfd7] dark:focus:border-[rgba(8,_112,_184,_0.5)]
+          ${
+            errors.subject != null && touched.subject
+              ? "text-red-500 border-red-500 dark:border-red-500"
+              : "text-lightSecondary dark:text-darkSecondary border-[#ced4da]"
+          }`}
+          placeholder="Enter your Subject..."
+        />
+        {errors.subject != null && touched.subject ? (
+          <span className="py-2 text-red-500">{errors.subject}</span>
         ) : (
           <span className="py-2"></span>
         )}
@@ -126,13 +182,13 @@ const Form = (props: Props) => {
           outline-none rounded-lg focus:shadow-[0px_0px_0px_3px_rgba(255,122,87,0.25)] dark:focus:shadow-[0px_0px_0px_3px_rgba(8,_112,_184,_0.5)] 
           focus:border-[#ffdfd7] dark:focus:border-[rgba(8,_112,_184,_0.5)] resize-none
           ${
-            errors.message != null
+            errors.message != null && touched.message
               ? "text-red-500 border-red-500 dark:border-red-500"
               : "text-lightSecondary dark:text-darkSecondary border-[#ced4da]"
           }`}
           placeholder="Enter your message..."
         />
-        {errors.message != null ? (
+        {errors.message != null && touched.message ? (
           <span className="py-2 text-red-500">{errors.message}</span>
         ) : (
           <span className="py-2"></span>

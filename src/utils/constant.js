@@ -52,8 +52,8 @@ export const navItems = [
   },
   {
     id: 5,
-    label: "Blog",
-    link: "#",
+    label: "Blogs",
+    link: "/blogs",
     icon: <ImBlogger />,
   },
   {

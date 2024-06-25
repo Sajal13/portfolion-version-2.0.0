@@ -10,7 +10,7 @@ type Props = {
   classNames?: string;
 };
 
-const Card = ({ item, clickHandler, classNames }: Props) => {
+const MasonryCard = ({ item, clickHandler, classNames }: Props) => {
   const [hoverDirection, setHoverDirection] = useState("");
 
   const handleMouseEnter = (e: {
@@ -39,7 +39,7 @@ const Card = ({ item, clickHandler, classNames }: Props) => {
       onMouseLeave={handleMouseLeave}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={item.thumbnail} alt="Hover Image" className="w-full h-auto block" />
+      <img src={item.masonryImage} alt="Hover Image" className="w-full" />
       <div
         className={`absolute inset-0 bg-[#0c151a]/80 dark:bg-[#ff7a57]/80 flex items-center justify-center text-white text-2xl transition-all duration-300 transform ${hoverDirection}`}
         style={{ opacity: hoverDirection.includes("hover-in") ? 1 : 0 }}
@@ -51,4 +51,4 @@ const Card = ({ item, clickHandler, classNames }: Props) => {
   );
 };
 
-export default Card;
+export default MasonryCard;

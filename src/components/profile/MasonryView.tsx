@@ -1,24 +1,28 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
-import Isotope from "isotope-layout";
-
+import React, { useRef, useEffect, useState, Fragment } from "react";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import { portfolioItems } from "@/utils/constants";
 import ProjectModal from "./ProjectModal";
-import Card from "./Card";
+import MasonryCard from "./MasonryCard";
 
 type Props = {
   filterKey: string;
 };
 
 const MasonryView = ({ filterKey }: Props) => {
-  const filterContainer = useRef<HTMLDivElement | null>(null);
-  const isotope = useRef<Isotope | null>(null);
-
   const [modalOpen, setModalOpen] = useState<boolean>(false);
-  const [selectedProjectIndex, setSelectedProjectIndex] = useState<number | null>(null);
-
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState<
+    number | null
+  >(null);
+  const filteredItems = filterKey
+    ? portfolioItems.filter((item) =>
+        item.category.some(
+          (category) => category.toLowerCase() === filterKey.toLocaleLowerCase()
+        )
+      )
+    : portfolioItems;
   const handleCardClick = (index: number) => {
     setSelectedProjectIndex(index);
     setModalOpen(true);
@@ -29,47 +33,32 @@ const MasonryView = ({ filterKey }: Props) => {
     setSelectedProjectIndex(null);
   };
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      import("isotope-layout").then((Isotope) => {
-        isotope.current = new Isotope.default(filterContainer.current!, {
-          itemSelector: ".filter-item",
-          layoutMode: "packery",
-          packery: {
-            gutter: 10
-          }
-        });
-      });
-    }
+  useEffect(() => {}, []);
 
-    return () => isotope.current?.destroy();
-  }, []);
-
-  useEffect(() => {
-    const filteredKey = filterKey ? `.${filterKey}` : "*";
-    if (isotope.current) {
-      isotope.current.arrange({ filter: filteredKey });
-    }
-  }, [filterKey]);
+  useEffect(() => {}, [filterKey]);
 
   return (
-    <div
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
-      ref={filterContainer}
-    >
-      {portfolioItems.map((item, index) => (
-        <div className={`filter-item ${item.category.join(" ")}`} key={item.id}>
-          <Card item={item} clickHandler={() => handleCardClick(index)} />
-        </div>
-      ))}
+    <Fragment>
+      <ResponsiveMasonry columnsCountBreakPoints={{ 375: 1, 768: 2, 1024: 3 }}>
+        <Masonry style={{ gap: 15 }}>
+          {filteredItems.map((item, index) => (
+            <div key={item.id} className={`mt-4`}>
+              <MasonryCard
+                item={item}
+                clickHandler={() => handleCardClick(index)}
+              />
+            </div>
+          ))}
+        </Masonry>
+      </ResponsiveMasonry>
       {modalOpen && (
         <ProjectModal
-          projects={portfolioItems}
+          projects={filteredItems}
           selectedProjectIndex={selectedProjectIndex}
           onClose={handleModalClose}
         />
       )}
-    </div>
+    </Fragment>
   );
 };
 

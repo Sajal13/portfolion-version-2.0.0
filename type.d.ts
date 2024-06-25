@@ -28,6 +28,7 @@ interface PortfolioItem {
   category: Array<string>;
   title: string;
   thumbnail: string;
+  masonryImage: string;
   images: Array<Images>;
   projectTitle: string;
   language: Array<string>;

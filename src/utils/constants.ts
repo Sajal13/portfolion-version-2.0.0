@@ -84,6 +84,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     category: ["nextjs", 'tailwindcss', 'reactjs', "html", "css"],
     title: 'Algo Kids',
     thumbnail: '/assets/images/projects/algo_kids/algo_kids_1.png',
+    masonryImage: '/assets/images/projects/algo_kids/algo_kids.webp',
     images: [
       {
         id: uuid(),
@@ -173,6 +174,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     category: ["nextjs", 'tailwindcss', 'reactjs', "html", 'css', "typescript"],
     title: 'BMTF',
     thumbnail: '/assets/images/projects/bmtf/bmtf_1.png',
+    masonryImage: '/assets/images/projects/bmtf/bmtf.webp',
     images: [
       {
         id: uuid(),
@@ -234,6 +236,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     category: ["html", "css", "pug", 'bootstrap', 'javascript'],
     title: 'POSH',
     thumbnail: '/assets/images/projects/posh/posh_1.png',
+    masonryImage: '/assets/images/projects/posh/posh.webp',
     images: [
       {
         id: uuid(),
@@ -307,6 +310,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     category: ["html", "css", "pug", 'bootstrap', 'javascript'],
     title: 'BrainwaveIO',
     thumbnail: '/assets/images/projects/brainwave/brainwave_1.png',
+    masonryImage: '/assets/images/projects/brainwave/brainwave.webp',
     images: [
       {
         id: uuid(),
@@ -368,6 +372,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     category: ["html", "css", "pug", 'bootstrap', 'javascript'],
     title: 'Aranyak',
     thumbnail: '/assets/images/projects/aranyak/aranyak_1.png',
+    masonryImage: '/assets/images/projects/aranyak/aranyak.webp',
     images: [
       {
         id: uuid(),
@@ -429,6 +434,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     category: ["svelte", 'tailwindcss', 'sveltekit', 'html', 'css', 'typescript'],
     title: 'TrMIS',
     thumbnail: '/assets/images/projects/trmis/trmis_1.png',
+    masonryImage: '/assets/images/projects/trmis/trmis.webp',
     images: [
       {
         id: uuid(),
@@ -506,6 +512,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     category: ["vuejs", 'vuetify', 'html', 'css'],
     title: 'iPICS',
     thumbnail: '/assets/images/projects/ipics/ipics_1.png',
+    masonryImage: '/assets/images/projects/ipics/ipics.webp',
     images: [
       {
         id: uuid(),
@@ -522,7 +529,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     ],
     projectTitle: 'INFORMATIVE WEBSITE FOR CANCER PATIENT',
     language: ["Html", "css", "vuetify","vuejs"],
-    link: 'https://ipics.inneedcloud.com/',
+    link: 'https://ipics.life/',
     description: [
       {
         id: uuid(),
@@ -543,6 +550,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     category: ["Astro", 'tailwindcss', 'html', 'css', "typescript"],
     title: 'Nokshasemi',
     thumbnail: '/assets/images/projects/nokshasemi/nokshasemi_1.png',
+    masonryImage: '/assets/images/projects/nokshasemi/nokshasemi.webp',
     images: [
       {
         id: uuid(),
@@ -592,6 +600,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     category: ["svelte", 'tailwindcss', 'html', 'css', "typescript"],
     title: 'Biz-InNeed',
     thumbnail: '/assets/images/projects/biz_inneed/biz_inneed_1.png',
+    masonryImage: '/assets/images/projects/biz_inneed/bizInneed.webp',
     images: [
       {
         id: uuid(),
@@ -633,6 +642,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     category: ['tailwindcss', 'html', 'css', "javascript"],
     title: 'Jp-InNeed',
     thumbnail: '/assets/images/projects/jp_inneed/jp_inneed_1.png',
+    masonryImage: '/assets/images/projects/jp_inneed/jpInneed.webp',
     images: [
       {
         id: uuid(),

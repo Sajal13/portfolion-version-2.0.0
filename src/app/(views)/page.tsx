@@ -87,7 +87,7 @@ export default function Home() {
         </div>
         <div className="text-center w-full">
           <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary">
-            4
+            5
           </h2>
           <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm leading-[1.5] tracking-[0.6px]">
             Happy Clients
