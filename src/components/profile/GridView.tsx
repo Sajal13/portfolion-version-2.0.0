@@ -33,7 +33,7 @@ const GridView = ({ filterKey }: Props) => {
   };
   
   return (
-    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8 transition-transform duration-1000 ease-linear">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8 transition-transform duration-1000 ease-linear">
       {filteredItems.map((item, index) => (
         <Card
           key={item.id}

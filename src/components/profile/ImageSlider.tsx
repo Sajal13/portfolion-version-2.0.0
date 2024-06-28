@@ -51,7 +51,7 @@ const ImageSlider = ({ imageItems }: Props) => {
           {imageItems.map((image) => (
             <SwiperSlide key={image.id}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={image.imageSrc} alt="" className="min-h-[25rem] h-full object-fit"/>
+              <img src={image.imageSrc} alt="" className="md:min-h-[25rem] h-full object-fit"/>
             </SwiperSlide>
           ))}
         </Swiper>

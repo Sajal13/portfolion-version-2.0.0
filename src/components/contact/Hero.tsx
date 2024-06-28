@@ -14,7 +14,7 @@ type Props = {};
 const Hero = (props: Props) => {
   return (
     <div className="">
-      <div className="mt-4 md:mt-5 lg:mt-0 text-center lg:text-start">
+      <div className="mt-2.5 md:mt-3 lg:mt-0 text-center lg:text-start">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lightSecondary dark:text-darkSecondary mb-3 md:mb-4 lg:mb-5">
           Got a project in <br className="hidden xl:block" />{" "}
           <span className="text-lightPrimary  dark:text-tertiary">mind?</span>

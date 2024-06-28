@@ -19,7 +19,7 @@ const Intro = (props: Props) => {
             <p
               className="text-lightSecondary dark:text-darkSecondary mb-3 px-6 lg:px-0 text-justify first-letter:text-7xl first-letter:font-bold first-letter:text-lightPrimary dark:first-letter:text-tertiary"
             >
-              Greetings! I specialize in providing top-notch web development
+              I specialize in providing top-notch web development
               services tailored to your unique needs. Whether you&apos;re a
               startup looking to establish your online presence or an
               established business aiming to revamp your website, I&apos;m here

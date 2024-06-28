@@ -9,7 +9,7 @@ type Props = {};
 const Page = (props: Props) => {
   return (
     <Layout pageTitle="Sajal Das || Contact Me">
-      <main className="container mx-auto mb-6 md:mb-10 lg:mb-14">
+      <main className="container mx-auto mb-8 md:mb-10 lg:mb-14">
         <section className="mt-3 py-6 md:py-8 lg:py-10 relative">
           <div className="text-center uppercase  text-darkPrimary dark:text-darkSecondary text-xl md:text-4xl font-light  leading-[21px] md:pt-2">
             Let&apos;s Talk
@@ -18,7 +18,7 @@ const Page = (props: Props) => {
             Contact
           </p>
         </section>
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 place-items-center xl:gap-24 min-h-[60vh] mt-16 lg:mt-20 px-4 md:px-8 lg:px-6 xl:px-2">
+        <section className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-14 lg:gap-16 xl:gap-24 min-h-[60vh] mt-8 md:mt-10 lg:mt-12 px-4 md:px-8 lg:px-6 xl:px-2">
           <Hero />
           <Form />
         </section>

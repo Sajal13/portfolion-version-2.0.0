@@ -1,7 +1,8 @@
 "use client";
 
+import Preloader from "@/components/shared/Preloader";
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Layout({
   children,
@@ -10,6 +11,20 @@ export default function Layout({
   children: React.ReactNode;
   pageTitle: string;
 }) {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+    if (document.readyState === "complete") {
+      setIsLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+
   useEffect(() => {
     document.title = pageTitle || "Algo Kids | Home";
   }, [pageTitle]);
@@ -18,7 +33,8 @@ export default function Layout({
       <Head>
         <title>{pageTitle || "Algo Kids | Home"}</title>
       </Head>
-      {children}
+      {isLoading && <Preloader />}
+      {!isLoading && children}
     </>
   );
 }

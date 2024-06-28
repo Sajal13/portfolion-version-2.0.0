@@ -25,10 +25,10 @@ const ProjectItems = (props: Props) => {
   };
 
   return (
-    <section className="py-10 md:py-12 text-center px-5 md:px-6">
+    <section className="py-8 md:py-10 lg:py-12 text-center px-5 md:px-6">
       <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-7 md:gap-10 lg:gap-14 mb-4 md:mb-6 lg:mb-8">
         <div>
-          <h4 className="text-2xl md:text-3xl font-bold text-lightSecondary dark:text-darkSecondary mb-5 sm:mb-0">
+          <h4 className="text-2xl md:text-3xl font-bold text-lightSecondary dark:text-darkSecondary mb-2 sm:mb-0">
             Projects
           </h4>
         </div>

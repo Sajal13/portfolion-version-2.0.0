@@ -53,19 +53,19 @@ const ProjectModal = ({ projects, selectedProjectIndex, onClose }: Props) => {
     >
       <div className="relative w-full max-w-[90vw] h-full mx-auto ">
         {/* Modal content */}
-        <div className={`relative h-full mx-6 my-4  rounded-[10px]`}>
+        <div className={`relative h-full mx-2 lg:mx-6 my-4  rounded-[10px]`}>
           {/* Modal header */}
-          <div className="flex items-center justify-between p-4 md:p-5  rounded-t ">
+          <div className="flex items-center justify-between px-2 pb-5 md:p-5  rounded-t ">
             <button
               type="button"
-              className="end-2.5 rounded-lg text-4xl lg:text-6xl ms-auto inline-flex justify-center items-center text-lightPrimary dark:text-tertiary"
+              className="end-2 rounded-lg text-5xl md:text-6xl ms-auto inline-flex justify-center items-center text-lightPrimary dark:text-tertiary"
               onClick={onClose}
             >
               <IoIosClose />
               <span className="sr-only">Close modal</span>
             </button>
           </div>
-          <div className="p-4">
+          <div className="px-4  md:p-4">
             <Swiper
               onSwiper={setSwiper}
               onBeforeInit={(swiperSlider) =>
@@ -81,20 +81,34 @@ const ProjectModal = ({ projects, selectedProjectIndex, onClose }: Props) => {
               }}
             >
               {projects.map((project, index) => (
-                <SwiperSlide key={index} className="px-2">
+                <SwiperSlide key={index} className="md:px-2">
                   <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 xl:gap-8 text-start mb-5 md:mb-7 lg:mb-9">
                     <ImageSlider imageItems={project.images} />
                     <div>
                       <h2 className="text-lightSecondary dark:text-darkSecondary font-bold text-2xl md:text-[1.85rem] lg:text-[2rem] md:leading-[1.5] mb-4 md:mb-5 lg:mb-6">
                         {project.projectTitle}
                       </h2>
-                      <div className="mb-4 md:mb-5 lg:mb-6">
-                        <h4 className="text-[#495057]/90 dark:text-[#f2f2f2]/90 text-lg md:text-xl lg:text-2xl mb-1.5">
-                          Project Title
-                        </h4>
-                        <p className="text-lightSecondary dark:text-darkSecondary md:text-lg lg:text-xl font-semibold">
-                          {project.title}
-                        </p>
+                      <div className="mb-5 md:mb-6 lg:mb-7 grid grid-cols-2 gap-4">
+                        <div>
+                          <h4 className="text-[#495057]/90 dark:text-[#f2f2f2]/90 text-lg md:text-xl lg:text-2xl mb-1.5">
+                            Project Title
+                          </h4>
+                          <p className="text-lightSecondary dark:text-darkSecondary md:text-lg lg:text-xl font-semibold">
+                            {project.title}
+                          </p>
+                        </div>
+                        <div className="">
+                          <h4 className="text-[#495057]/90 dark:text-[#f2f2f2]/90 text-lg md:text-xl lg:text-2xl mb-1">
+                            Project Link
+                          </h4>
+                          <Link
+                            href={project.link}
+                            target="_blank"
+                            className="text-lightPrimary dark:text-tertiary hover:underline py-2 font-semibold"
+                          >
+                            {project.title}
+                          </Link>
+                        </div>
                       </div>
                       <div className="mb-4 md:mb-5 lg:mb-6">
                         <h4 className="text-[#495057]/90 dark:text-[#f2f2f2]/90 text-lg md:text-xl lg:text-2xl mb-2">
@@ -111,21 +125,9 @@ const ProjectModal = ({ projects, selectedProjectIndex, onClose }: Props) => {
                           ))}
                         </div>
                       </div>
-                      <div className="">
-                        <h4 className="text-[#495057]/90 dark:text-[#f2f2f2]/90 text-lg md:text-xl lg:text-2xl mb-1">
-                          Project Link
-                        </h4>
-                        <Link
-                          href={project.link}
-                          target="_blank"
-                          className="text-lightPrimary dark:text-tertiary hover:underline py-2 font-semibold"
-                        >
-                          {project.title}
-                        </Link>
-                      </div>
                     </div>
                   </div>
-                  <div className="text-start pb-3">
+                  <div className="text-start md:pb-3">
                     <h4 className="text-[#495057]/90 dark:text-[#f2f2f2]/90 text-lg font-medium md:text-xl lg:text-2xl lg:leading-[1.5] mb-2 md:mb-2.5 lg:mb-3">
                       Description
                     </h4>
@@ -145,7 +147,7 @@ const ProjectModal = ({ projects, selectedProjectIndex, onClose }: Props) => {
             </Swiper>
           </div>
         </div>
-        <div className="absolute -left-2 md:-left-5 lg:-left-10 top-1/2 -translate-y-1/2 z-10">
+        <div className="absolute -left-3 md:-left-5 lg:-left-10 top-1/2 -translate-y-1/2 z-10">
           <button
             className="text-2xl lg:text-4xl text-lightPrimary dark:text-tertiary font-bold p-2 flex items-center justify-center rounded-full"
             type="button"
@@ -157,7 +159,7 @@ const ProjectModal = ({ projects, selectedProjectIndex, onClose }: Props) => {
             </span>
           </button>
         </div>
-        <div className="absolute -right-2 md:-right-5 lg:-right-10 top-1/2 -translate-y-1/2 z-10">
+        <div className="absolute -right-3 md:-right-5 lg:-right-10 top-1/2 -translate-y-1/2 z-10">
           <button
             className="text-2xl lg:text-4xl text-lightPrimary dark:text-tertiary font-bold p-2 flex items-center justify-center rounded-full"
             type="button"
