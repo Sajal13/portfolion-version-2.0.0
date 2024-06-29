@@ -3,6 +3,7 @@
 import React, { Fragment } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SectionHeader from "../shared/SectionHeader";
+import { MdSimCardDownload } from "react-icons/md";
 
 type Props = {};
 
@@ -57,9 +58,19 @@ const Objective = (props: Props) => {
                 whileInView={{ y: 0, opacity: 1 }}
                 exit={{ y: 20, opacity: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="uppercase  text-white font-bold bg-lightPrimary border border-lightPrimary dark:bg-tertiary dark:border-tertiary transition-all duration-200 ease-linear rounded-[3.125rem] px-4 py-2.5 inline-block leading-[21px]"
+                className="uppercase relative  text-white font-bold bg-lightPrimary border border-lightPrimary dark:bg-tertiary dark:border-tertiary transition-all duration-200 ease-linear rounded-[3.125rem] min-w-[9.688rem] max-h-[2.688rem] px-4 py-2.5 leading-[21px] overflow-hidden group flex flex-col justify-center items-center mx-6 lg:mx-0"
               >
-                Download CV
+                <span
+                  className="group-hover:translate-y-[-100px] duration-300 ease-linear transition-all group-hover:duration-300 group-hover:ease-linear group-hover:transition-all "
+                >
+                  Download CV
+                </span>
+                <span
+                  
+                  className="absolute bottom-0 translate-y-[50px] group-hover:translate-y-[-5px] duration-300 ease-linear transition-all group-hover:duration-300 group-hover:ease-linear group-hover:transition-all text-3xl overflow-hidden"
+                >
+                  <MdSimCardDownload />
+                </span>
               </motion.button>
             </div>
           </div>

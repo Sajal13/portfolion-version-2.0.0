@@ -131,12 +131,12 @@ export default function Home() {
                   alt=""
                   className="-mb-[1px] dark:drop-shadow-[0px_0px_30px_rgba(173,189,189,0.5)] transition-all duration-300 ease-linear"
                   initial={{
-                    x: -350,
+                    x: -100,
                     opacity: 0,
                     scale: 0.5,
                   }}
                   whileInView={{ x: 0, opacity: 1, scale: 1 }}
-                  exit={{ x: -350, opacity: 0, scale: 0.5 }}
+                  exit={{ x: -100, opacity: 0, scale: 0.5 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 />
               </div>
@@ -154,7 +154,7 @@ export default function Home() {
           >
             <div className="text-center border-r border-r-[#dee2e6] w-full flex flex-col justify-between">
               <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary mb-2 md:mb-1.5">
-                <Countup start={0} end={10} duration={4} suffix="+" />
+                <Countup start={0} end={10} duration={5} suffix="+" />
               </h2>
               <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm md:leading-[1.5] tracking-[0.6px]">
                 Project <br className="md:hidden" /> Completed
@@ -162,7 +162,7 @@ export default function Home() {
             </div>
             <div className="text-center border-r border-r-[#dee2e6] w-full flex flex-col justify-between">
               <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary mb-2 md:mb-1.5">
-                <Countup start={0} end={2} duration={1} />
+                <Countup start={0} end={2} duration={2} />
               </h2>
               <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm md:leading-[1.5] tracking-[0.6px]">
                 Years of Experience

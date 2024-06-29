@@ -58,9 +58,12 @@ const Header = (props: Props) => {
     <Fragment>
       <div className="w-full h-16 sticky top-0 left-0 z-50 bg-white/60 dark:bg-black/60 backdrop-blur-[6px]  md:hidden shadow-sm dark:shadow-lightSecondary">
         <div className=" container mx-auto flex items-center justify-between h-full">
-          <h3 className="text-lightSecondary dark:text-darkSecondary text-xl md:text-2xl font-medium">
+          <Link
+            href={"/"}
+            className="text-lightSecondary dark:text-darkSecondary text-xl md:text-2xl font-medium"
+          >
             Sajal Das.
-          </h3>
+          </Link>
           <button
             onClick={handleMenuClose}
             className="text-2xl lg:text-3xl w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-lightPrimary dark:bg-darkSecondary flex items-center justify-center transition-all duration-1000 ease-linear overflow-hidden"
@@ -166,27 +169,17 @@ const Header = (props: Props) => {
                 onClick={handleClick}
                 className="text-2xl lg:text-3xl w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-lightPrimary dark:bg-darkSecondary flex items-center justify-center hover:bg-tertiary dark:hover:bg-tertiary text-white dark:text-darkPrimary overflow-hidden"
               >
-                <AnimatePresence initial={false}>
                 {theme && theme === "dark" ? (
-                  <motion.span
-                    initial={{ x: 80, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -80, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                  <span
                   >
                     <PiSunFill />
-                  </motion.span>
+                  </span>
                 ) : (
-                  <motion.span
-                    initial={{ x: 80, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -80, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                  <span
                   >
                     <AiFillMoon />
-                  </motion.span>
+                  </span>
                 )}
-                </AnimatePresence>
               </button>
               <div className="absolute hidden group-hover:block top-1/2 z-20 -translate-y-1/2 left-full translate-x-2 lg:translate-x-1 px-5 lg:px-3 py-2 border-primary group-hover:bg-tertiary  backdrop-blur-[5px] rounded-[50px] lg:bg-transparent dark:lg:bg-transparent lg:backdrop-blur-none">
                 <p className="text-lg text-white">Theme</p>

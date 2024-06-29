@@ -36,11 +36,23 @@ const SkillCard = ({ item }: Props) => {
                 delay: 0.3 + 0.1 * index,
               }}
             >
-              <div className="p-6 bg-lightPrimary dark:bg-tertiary rounded-full w-fit mx-auto transition-colors duration-300 ease-linear">
-                <i className="text-3xl md:text-5xl lg:text-6xl text-white">
-                  {skill.icon}
-                </i>
-              </div>
+              <AnimatePresence initial={false}>
+                <div className="p-6 bg-lightPrimary dark:bg-tertiary rounded-full w-fit mx-auto transition-colors duration-300 ease-linear overflow-hidden">
+                  <motion.div
+                    initial={{ y: 0,  }}
+                    whileHover={{ y: [0, -100 , 150, 0] }}
+                    exit={{y: [0, -150, 100, 0]}}
+                    transition={{
+                      duration: 1,
+                      ease: "easeInOut",
+                      times: [0, 0.3, 0.7, 1],
+                    }}
+                    className="text-3xl md:text-5xl lg:text-6xl text-white overflow-hidden"
+                  >
+                    {skill.icon}
+                  </motion.div>
+                </div>
+              </AnimatePresence>
               <div className="my-2 md:my-3 lg:my-4">
                 <h5 className="text-xl md:text-[22px] lg:text-2xl text-lightSecondary dark:text-darkSecondary font-medium">
                   {skill.title}
