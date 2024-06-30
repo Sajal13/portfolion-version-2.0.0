@@ -18,7 +18,7 @@ const SectionHeader = ({ sectionText, absoluteText }: Props) => {
             duration: 0.3,
             delay: 0.3,
           }}
-          className="text-center uppercase  text-darkPrimary dark:text-darkSecondary text-xl md:text-4xl font-light  leading-[21px] md:pt-2"
+          className="text-center uppercase  text-lightPrimary dark:text-tertiary text-2xl md:text-4xl font-medium  leading-[21px] md:pt-2"
         >
           {sectionText}
         </motion.div>
@@ -43,7 +43,7 @@ const SectionHeader = ({ sectionText, absoluteText }: Props) => {
           transition={{
             duration: 0.3,
           }}
-          className="uppercase absolute top-1 left-1/2 -translate-x-1/2 font-bold  text-black/10 dark:text-white/10 -z-10 text-6xl md:text-9xl"
+          className="uppercase absolute top-1 left-1/2 -translate-x-1/2 font-bold  text-black/5 dark:text-white/5 -z-10 text-6xl md:text-9xl"
         >
           {absoluteText}
         </motion.p>

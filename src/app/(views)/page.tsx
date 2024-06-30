@@ -26,13 +26,13 @@ export default function Home() {
                     duration: 0.5,
                   }}
                 >
-                  <h6 className="text-lg sm:text-xl md:text-2xl text-lightSecondary dark:text-darkSecondary font-medium">
+                  <h6 className="text-lg sm:text-xl md:text-2xl xl:text-4xl text-lightSecondary dark:text-darkSecondary font-medium">
                     Hello, I&apos;m
                   </h6>
-                  <h4 className="text-7xl text-lightSecondary dark:text-darkSecondary font-bold leading-[1.2]">
+                  <h4 className="text-7xl xl:text-8xl text-lightSecondary dark:text-darkSecondary font-bold leading-[1.5] xl:mb-3">
                     Sajal Das
                   </h4>
-                  <p className="text-lg md:text-[22px] md:leading-[1.5] text-lightSecondary dark:text-darkSecondary">
+                  <p className="text-lg md:text-[22px] xl:text-3xl md:leading-[1.5] text-lightSecondary dark:text-darkSecondary">
                     A Web Developer
                   </p>
                 </motion.div>
@@ -51,16 +51,22 @@ export default function Home() {
                       Hire Me
                     </motion.button>
                   </Link>
-                  <motion.button
-                    className="uppercase  text-white font-bold bg-tertiary border border-tertiary dark:bg-lightPrimary dark:border-lightPrimary hover:bg-transparent dark:hover:bg-transparent hover:text-tertiary dark:hover:text-lightPrimary transition-all duration-200 ease-linear rounded-[3.125rem] px-4 py-2.5 inline-block leading-[21px]"
-                    initial={{ x: -160, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{
-                      duration: 0.3,
-                    }}
+                  <Link
+                    href={"/assets/pdf/sajal_das-front_end_developer.pdf"}
+                    download={true}
+                    target="_blank"
                   >
-                    Download CV
-                  </motion.button>
+                    <motion.button
+                      className="uppercase  text-white font-bold bg-tertiary border border-tertiary dark:bg-lightPrimary dark:border-lightPrimary hover:bg-transparent dark:hover:bg-transparent hover:text-tertiary dark:hover:text-lightPrimary transition-all duration-200 ease-linear rounded-[3.125rem] px-4 py-2.5 inline-block leading-[21px]"
+                      initial={{ x: -160, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      transition={{
+                        duration: 0.3,
+                      }}
+                    >
+                      Download CV
+                    </motion.button>
+                  </Link>
                 </div>
                 <div className="flex gap-3 items-center mt-6 overflow-hidden">
                   <motion.div
@@ -129,7 +135,7 @@ export default function Home() {
                 <motion.img
                   src="/assets/images/illustration/man.svg"
                   alt=""
-                  className="-mb-[1px] dark:drop-shadow-[0px_0px_30px_rgba(173,189,189,0.5)] transition-all duration-300 ease-linear"
+                  className="-mb-[1px] dark:drop-shadow-[0px_0px_30px_rgba(173,189,189,0.5)] transition-all duration-300 ease-linear xl:max-w-[75%]"
                   initial={{
                     x: -100,
                     opacity: 0,
