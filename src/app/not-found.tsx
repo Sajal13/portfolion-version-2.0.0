@@ -28,7 +28,7 @@ const NotFound = (props: Props) => {
             Not Found! <span className="not-italic">🫥</span>
           </h3>
           <p className="text-lg md:text-xl lg:text-2xl test-lightSecondary dark:text-darkSecondary mb-1.5 mb:mb-2 lg:mb-2.5">
-            The Page you are looking for is not available
+            The page you are looking for is not available
           </p>
           <Link href={'/'} className="flex justify-center items-center gap-2.5 hover:underline">
             <span>Go to Home page </span>
