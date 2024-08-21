@@ -8,6 +8,8 @@ import { MdOutlineWork } from "react-icons/md";
 import { TbBriefcase } from "react-icons/tb";
 import { ImBlogger } from "react-icons/im";
 
+import { tableData } from "@/utils/data/Skills";
+
 type Props = {};
 
 const Page = (props: Props) => {
@@ -102,7 +104,7 @@ const Page = (props: Props) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-6 ">
         <Card
           url="/admin/skills"
-          length={4}
+          length={tableData.length}
           title="Skills"
           bgColor="bg-[#DD1C5D]"
           icons={<BsTools />}
@@ -112,7 +114,7 @@ const Page = (props: Props) => {
           }}
         />
         <Card
-          url="/admin/experiences"
+          url="/admin/experience"
           length={4}
           title="Experience"
           bgColor="bg-tertiary"
@@ -123,7 +125,7 @@ const Page = (props: Props) => {
           }}
         />
         <Card
-          url="/admin/portfolios"
+          url="/admin/portfolio"
           length={4}
           title="Portfolio"
           bgColor="bg-success"

@@ -35,3 +35,9 @@ interface PortfolioItem {
   description: Array<Description>;
   link: string;
 }
+
+interface AdminSideNavItem{
+  id: string;
+  label: string;
+  link: string;
+}

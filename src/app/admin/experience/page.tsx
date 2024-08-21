@@ -4,10 +4,10 @@ import SelectInput from "@/components/admin/inputs/SelectInput";
 import TextInput from "@/components/admin/inputs/TextInput";
 import React, { useState } from "react";
 import {
-  skillCategories,
-  tableData,
-  type TableData,
-} from "@/utils/data/Skills";
+  experienceLists,
+  categoriesOptions,
+  type ExperienceList,
+} from "@/utils/data/Experience";
 import ActionButton from "@/components/admin/ActionButton";
 import TableLayout from "@/components/admin/TableLayout";
 import { TableContextProvider } from "@/utils/useTableProvider";
@@ -19,6 +19,7 @@ import { useFormik } from "formik";
 import { AnimatePresence, motion } from "framer-motion";
 import Button from "@/components/admin/Button";
 import DeleteModal from "@/components/admin/modal/DeleteModal";
+// import { useTruncateText } from "@/utils/useTextTruncate";
 
 type Props = {};
 
@@ -32,14 +33,14 @@ const Page = (props: Props) => {
     handleNext,
     handlePrevious,
     paginatedData,
-  } = TableContextProvider<TableData>({
-    tableItems: tableData,
-    sortBy: "category",
+  } = TableContextProvider<ExperienceList>({
+    tableItems: experienceLists,
+    sortBy: "type",
   });
 
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
   const [isDeleteModalOpen, setDeleteModalOpen] = useState<boolean>(false);
-  const [editItem, setEditItem] = useState<TableData | null>(null);
+  const [editItem, setEditItem] = useState<ExperienceList | null>(null);
   const [deleteItem, setDeleteItem] = useState<string | null>(null);
 
   const {
@@ -65,6 +66,19 @@ const Page = (props: Props) => {
     validationSchema: skillSchema,
   });
 
+  const truncateText = ({
+    text,
+    maxLength = 100,
+  }: {
+    text: string;
+    maxLength?: number;
+  }): string => {
+    if (text.length <= maxLength) {
+      return text;
+    }
+    return text.slice(0, maxLength) + "...";
+  };
+
   const handleClose = () => {
     setModalOpen(false);
     resetForm();
@@ -72,13 +86,13 @@ const Page = (props: Props) => {
   const addButtonClickHandler = () => {
     setModalOpen(true);
   };
-  const editHandler = (item: TableData) => {
-    setFieldValue("category", item.category);
-    setFieldValue("title", item.title);
-    setFieldValue("iconFamily", item.iconFamily);
-    setFieldValue("iconName", item.iconName);
-    setEditItem(item);
-    setModalOpen(true);
+  const editHandler = (item: ExperienceList) => {
+    // setFieldValue("category", item.category);
+    // setFieldValue("title", item.title);
+    // setFieldValue("iconFamily", item.iconFamily);
+    // setFieldValue("iconName", item.iconName);
+    // setEditItem(item);
+    // setModalOpen(true);
   };
 
   const deleteHandler = (id: string) => {
@@ -98,7 +112,7 @@ const Page = (props: Props) => {
   return (
     <section className="px-2">
       <TableLayout
-        tableHeader="Skills"
+        tableHeader="Experiences"
         searchQuery={searchQuery}
         handleSearchChange={handleSearchChange}
         handlePrevious={handlePrevious}
@@ -108,30 +122,36 @@ const Page = (props: Props) => {
         length={paginatedData.length}
         headers={[
           "#",
-          "Category",
           "Title",
-          "Icon Family",
-          "Icon Name",
+          "Type",
+          "Start Date",
+          "End Date",
+          "Description",
           "Action",
         ]}
         handleAddButtonClick={addButtonClickHandler}
       >
-        {paginatedData.map((skill, index) => (
+        {paginatedData.map((experience, index) => (
           <tr
-            key={skill.id}
+            key={experience.id}
             className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 capitalize text-center"
           >
             <td className="px-6 py-4">{startIndex + index + 1}</td>
             <th className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              {skill.category}
+              {truncateText({ text: experience.title, maxLength: 20 })}
             </th>
-            <td className="px-6 py-4">{skill.title}</td>
-            <td className="px-6 py-4">{skill.iconFamily}</td>
-            <td className="px-6 py-4">{skill.iconName}</td>
+            <td className="px-6 py-4">{experience.type}</td>
+            <td className="px-6 py-4">{experience.start}</td>
+            <td className="px-6 py-4">{experience.end}</td>
+            <td className="px-6 py-4">
+              {truncateText({ text: experience.description, maxLength: 30 })}
+            </td>
             <td className="px-6 py-4">
               <ActionButton
-                editButtonClickHandler={() => editHandler(skill)}
-                deleteButtonClickHandler={() => deleteHandler(skill.id)}
+                editButtonClickHandler={() => editHandler(experience)}
+                deleteButtonClickHandler={() => deleteHandler(experience.id)}
+                view={true}
+                viewButtonClickHandler={() => console.log("clicked")}
               />
             </td>
           </tr>
@@ -139,7 +159,7 @@ const Page = (props: Props) => {
       </TableLayout>
 
       {/* Add and Edit Modal start */}
-      <Modal
+      {/* <Modal
         onClose={handleClose}
         headerColor="text-lightPrimary dark:text-tertiary"
         headerText={editItem ? "Edit Item" : "Add Item"}
@@ -200,18 +220,18 @@ const Page = (props: Props) => {
             <Button title="Submit" />
           </div>
         </form>
-      </Modal>
+      </Modal> */}
       {/* Add and Edit Modal end */}
 
       {/* Delete Modal start*/}
-      <DeleteModal
+      {/* <DeleteModal
         isDeleteModalOpen={isDeleteModalOpen}
         setDeleteItem={setDeleteItem}
         setDeleteModalOpen={setDeleteModalOpen}
         handleCancelButtonClick={handleCancelButtonClick}
         handleDeleteButtonClick={handleDeleteButtonClick}
-        title="skill"
-      />
+        title="experience"
+      /> */}
       {/* Delete Modal end*/}
     </section>
   );

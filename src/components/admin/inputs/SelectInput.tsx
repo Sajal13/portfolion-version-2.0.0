@@ -3,31 +3,28 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 import classNames from "classNames";
+import { type Option } from "@/utils/data/Skills";
 
 type Props = {
   name: string;
   label: string;
   labelClass?: string;
-  type: string;
   inputClassNames?: string;
-  changeHandler: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  handleBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
-  value: string;
-  placeholder: string;
+  changeHandler: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  options: Array<Option>;
   error?: string | boolean | undefined;
+  value: string;
 };
 
-const TextInput = ({
+const SelectInput = ({
   name,
   label,
   labelClass,
-  type,
   inputClassNames,
-  handleBlur,
   changeHandler,
-  value,
-  placeholder,
+  options,
   error,
+  value,
 }: Props) => {
   const labelClasses = twMerge(
     "capitalize",
@@ -37,19 +34,20 @@ const TextInput = ({
     labelClass
   );
 
-  const inputClasses = twMerge(
+  const selectClasses = twMerge(
     "w-full",
-    "inline-block",
+    "block",
     "py-2",
     "px-4",
-    "outline-0",
     "border",
     "border-lightPrimary",
     "dark:border-tertiary",
+    "outline-0",
     "rounded-lg",
     "mt-2",
     "md:mt-2.5",
     "lg:mt-3",
+    "capitalize",
     "focus:border-tertiary",
     "bg-white",
     "text-darkPrimary",
@@ -65,16 +63,19 @@ const TextInput = ({
       <label htmlFor={name} className={labelClasses}>
         {label}
       </label>
-      <input
-        type={type}
-        value={value}
+      <select
         onChange={changeHandler}
-        onBlur={handleBlur}
         name={name}
         id={name}
-        placeholder={placeholder}
-        className={inputClasses}
-      />
+        className={selectClasses}
+        value={value}
+      >
+        {options.map((itm: Option) => (
+          <option key={itm.id} value={itm.value} className="capitalize">
+            {itm.label}
+          </option>
+        ))}
+      </select>
       <div className="mt-2">
         {error && <span className="text-red-500">{error}</span>}
       </div>
@@ -82,4 +83,4 @@ const TextInput = ({
   );
 };
 
-export default TextInput;
+export default SelectInput;
