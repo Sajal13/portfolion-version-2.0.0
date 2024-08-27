@@ -3,11 +3,8 @@
 import SelectInput from "@/components/admin/inputs/SelectInput";
 import TextInput from "@/components/admin/inputs/TextInput";
 import React, { useState } from "react";
-import {
-  skillCategories,
-  tableData,
-  type TableData,
-} from "@/utils/data/Skills";
+import { tableData, type TableData } from "@/utils/data/Skills";
+import { skillCategories } from "@/utils/data/SelectOptions";
 import ActionButton from "@/components/admin/ActionButton";
 import TableLayout from "@/components/admin/TableLayout";
 import { TableContextProvider } from "@/utils/useTableProvider";

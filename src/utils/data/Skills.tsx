@@ -19,12 +19,6 @@ import {
 } from "react-icons/tb";
 import { BsFiletypeScss, BsTools } from "react-icons/bs";
 
-export interface Option {
-  id: string;
-  value: string;
-  label: string;
-}
-
 interface SkillSet {
   id: number;
   title: string;
@@ -36,24 +30,6 @@ export interface Skill {
   category: string;
   skillSet: SkillSet[];
 }
-
-export const skillCategories: Option[] = [
-  {
-    id: "1",
-    value: "",
-    label: "Select Category",
-  },
-  {
-    id: "2",
-    value: "1",
-    label: "experienced with",
-  },
-  {
-    id: "3",
-    value: "2",
-    label: "Familiar with",
-  },
-];
 
 export const skills: Skill[] = [
   {

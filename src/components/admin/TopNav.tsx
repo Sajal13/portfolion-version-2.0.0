@@ -14,16 +14,18 @@ const TopNav = (props: Props) => {
           opacity: 0,
         }}
         animate={{
-          x:0,
-          opacity: 1
+          x: 0,
+          opacity: 1,
         }}
         transition={{
-          duration: 0.5
+          duration: 0.5,
         }}
-        className="hidden lg:flex justify-between items-center p-4 h-[4.5rem] bg-gray-800 text-white fixed top-0 right-0 w-screen lg:w-[calc(100vw-16rem)] z-50"
+        className="hidden xl:flex justify-between items-center p-4 h-[4.5rem] bg-gray-800 text-white fixed top-0 right-0 w-screen xl:w-[calc(100vw-16rem)] z-50"
       >
         <div className="text-xl font-bold">My Dashboard</div>
-        <button className="bg-red-700 hover:bg-red-800 transition-colors duration-300 ease-linear px-4 py-2 rounded">Log Out</button>
+        <button className="bg-red-700 hover:bg-red-800 transition-colors duration-300 ease-linear px-4 py-2 rounded">
+          Log Out
+        </button>
       </motion.div>
     </AnimatePresence>
   );

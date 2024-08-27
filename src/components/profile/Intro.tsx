@@ -2,7 +2,7 @@
 
 import React, { Fragment } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { portfolioItems } from "@/utils/constants";
+import { portfolioItems } from "@/utils/data/Portfolio";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 

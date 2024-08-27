@@ -32,7 +32,7 @@ const DeleteModal = ({
       isOpen={isDeleteModalOpen}
     >
       <div className="py-8 px-4 text-center border-t border-t-black/5">
-        <h5 className="text-xl md:text-[22px] lg:text-2xl text-darkPrimary py-8">
+        <h5 className="text-xl md:text-[22px] lg:text-2xl text-darkPrimary pt-2 pb-8">
           Are you want to delete this {title}?
         </h5>
         <div className="flex justify-end items-center gap-2 md:gap-3 lg:gap-5 pt-4 border-t border-t-black/5">

@@ -21,7 +21,9 @@ const AdminLayout = ({ children }: Props) => {
       <TopNav />
       <div className="flex bg-darkPrimary">
         <Sidebar />
-        <main className="lg:ml-64 p-4 pt-28  w-full h-[calc(100vh-3rem)]">{children}</main>
+        <main className="xl:ml-64 p-4 pt-28  w-full h-[calc(100vh-3rem)]">
+          {children}
+        </main>
       </div>
     </div>
   );

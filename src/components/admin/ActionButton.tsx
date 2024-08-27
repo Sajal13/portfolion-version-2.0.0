@@ -25,6 +25,7 @@ const ActionButton = ({
           <button
             className="p-2 bg-lightPrimary hover:bg-darkPrimary text-white rounded-lg "
             onClick={viewButtonClickHandler}
+            type="button"
           >
             <span>
               <FaEye />
@@ -40,6 +41,7 @@ const ActionButton = ({
         <button
           className="p-2 bg-tertiary hover:bg-success text-white rounded-lg "
           onClick={editButtonClickHandler}
+          type="button"
         >
           <span>
             <FaPen />
@@ -54,6 +56,7 @@ const ActionButton = ({
         <button
           className="p-2 bg-red-700 hover:bg-red-800 text-white rounded-lg "
           onClick={deleteButtonClickHandler}
+          type="button"
         >
           <span>
             <IoTrashBin />

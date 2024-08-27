@@ -31,7 +31,7 @@ const TableLayout = ({
   length,
   totalPages,
   headers,
-  handleAddButtonClick
+  handleAddButtonClick,
 }: Props) => {
   return (
     <>
@@ -69,12 +69,12 @@ const TableLayout = ({
             </div>
           </div>
           <div>
-            <button 
-            className={`w-full overflow-hidden bg-lightPrimary dark:bg-tertiary hover:bg-transparent 
+            <button
+              className={`w-full overflow-hidden bg-lightPrimary dark:bg-tertiary hover:bg-transparent 
             dark:hover:bg-transparent border border-lightPrimary dark:border-tertiary text-white rounded-lg 
             font-bold text-sm lg:text-base py-[0.65rem] px-[0.9rem] flex justify-center items-center transition-all 
             duration-200`}
-            onClick={handleAddButtonClick}
+              onClick={handleAddButtonClick}
             >
               Add New
             </button>

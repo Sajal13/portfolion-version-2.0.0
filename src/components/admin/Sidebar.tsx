@@ -19,16 +19,16 @@ const Sidebar = (props: Props) => {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024); 
-      if (window.innerWidth > 1024) {
+      setIsLargeScreen(window.innerWidth >= 1280);
+      if (window.innerWidth > 1280) {
         setIsOpen(false);
       }
     };
 
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
 
-    return () => window.removeEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   return (
@@ -37,12 +37,12 @@ const Sidebar = (props: Props) => {
         initial={{ y: -100, opacity: 0 }}
         animate={{
           y: 0,
-          opacity: 1
+          opacity: 1,
         }}
         transition={{
-          duration: 0.2
+          duration: 0.2,
         }}
-        className="lg:hidden z-50 bg-gray-600 backdrop-blur-[6px] flex justify-between items-center p-4  text-white fixed top-0 right-0 w-screen lg:w-[calc(100vw-16rem)]"
+        className="xl:hidden z-50 bg-gray-600 backdrop-blur-[6px] flex justify-between items-center p-4 text-white fixed top-0 right-0 w-screen xl:w-[calc(100vw-16rem)]"
       >
         <div className="p-4 flex items-center justify-between w-full h-full">
           <Link href={"/"} className="text-xl md:text-2xl font-medium">
@@ -50,7 +50,7 @@ const Sidebar = (props: Props) => {
           </Link>
           <button
             onClick={handleMenuClose}
-            className="text-2xl lg:text-3xl w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white text-gray-700 flex items-center justify-center transition-all duration-1000 ease-linear overflow-hidden"
+            className="text-2xl w-10 h-10 rounded-full bg-white text-gray-700 flex items-center justify-center transition-all duration-1000 ease-linear overflow-hidden"
           >
             <AnimatePresence initial={false}>
               {isOpen ? (
@@ -100,7 +100,7 @@ const Sidebar = (props: Props) => {
           transition={{
             duration: 0.5,
           }}
-          className={`lg:w-64 h-screen bg-gray-700 text-white fixed lg:top-0 left-0 pt-8 z-20 overflow-hidden`}
+          className={`xl:w-64 h-screen bg-gray-700 text-white fixed xl:top-0 left-0 pt-8 z-20 overflow-hidden`}
         >
           <NavItem />
         </motion.div>

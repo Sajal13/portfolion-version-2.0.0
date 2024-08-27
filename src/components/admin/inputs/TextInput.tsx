@@ -40,6 +40,7 @@ const TextInput = ({
   const inputClasses = twMerge(
     "w-full",
     "inline-block",
+    "text-sm",
     "py-2",
     "px-4",
     "outline-0",

@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 import classNames from "classNames";
 import { AnimatePresence, motion } from "framer-motion";
 
-type ModalType = "delete" | "simple";
+type ModalType = "delete" | "simple" | "medium";
 type Props = {
   onClose: () => void;
   children: React.ReactNode;
@@ -32,8 +32,10 @@ const Modal = ({
     classNames({
       "bg-white rounded-lg min-w-[20rem] md:min-w-[26rem] lg:min-w-[35rem]":
         modalType === "delete",
-      "bg-white rounded-lg min-w-[20rem] md:min-w-[35rem] lg:min-w-[calc(100vw-100px)]":
+      "bg-white rounded-lg min-w-[20rem] md:min-w-[35rem] lg:min-w-[calc(100vw-300px)]":
         modalType === "simple",
+      "bg-white rounded-lg min-w-[20rem] md:min-w-[30rem] lg:min-w-[30rem]":
+        modalType === "medium",
     })
   );
 
@@ -41,7 +43,7 @@ const Modal = ({
     <>
       {isOpen && (
         <AnimatePresence>
-          <div className="overflow-y-scroll scrollbar-custom overflow-x-hidden fixed top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center w-full md:inset-0 shadow-lg  bg-black/50 backdrop-blur-[3px] duration-300 ease-in-out">
+          <div className="overflow-y-scroll scrollbar-custom overflow-x-hidden fixed lg:top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center w-full md:inset-0 shadow-lg  bg-black/50 backdrop-blur-[3px] duration-300 ease-in-out">
             <motion.div
               initial={{ y: -100, opacity: 0 }}
               whileInView={{
@@ -50,7 +52,7 @@ const Modal = ({
               }}
               exit={{ y: -100, opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative p-4 w-fit mx-auto "
+              className="relative p-4 w-fit mx-auto max-h-screen"
             >
               {/* Modal content */}
               <div className={`relative ${modalClass}`}>

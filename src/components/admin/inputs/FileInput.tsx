@@ -1,32 +1,29 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import classNames from "classNames";
-import { type Option } from "@/utils/data/SelectOptions";
 
 type Props = {
   name: string;
   label: string;
   labelClass?: string;
   inputClassNames?: string;
-  changeHandler: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  options: Array<Option>;
-  error?: string | boolean | undefined | string[];
-  value: string | string[];
+  changeHandler: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
   isMultiple?: boolean;
+  error?: string | boolean | undefined | string[];
 };
 
-const SelectInput = ({
+const FileInput = ({
   name,
   label,
   labelClass,
   inputClassNames,
+  handleBlur,
   changeHandler,
-  options,
+  isMultiple = false,
   error,
-  value,
-  isMultiple,
 }: Props) => {
   const labelClasses = twMerge(
     "capitalize",
@@ -35,22 +32,20 @@ const SelectInput = ({
     "font-medium",
     labelClass
   );
-
-  const selectClasses = twMerge(
+  const inputClasses = twMerge(
     "w-full",
-    "block",
+    "inline-block",
     "text-sm",
     "py-2",
     "px-4",
+    "outline-0",
     "border",
     "border-lightPrimary",
     "dark:border-tertiary",
-    "outline-0",
     "rounded-lg",
-    "mt-2",
-    "md:mt-2.5",
-    "lg:mt-3",
-    "capitalize",
+    "my-2",
+    "md:my-2.5",
+    "lg:my-3",
     "focus:border-tertiary",
     "bg-white",
     "text-darkPrimary",
@@ -66,25 +61,19 @@ const SelectInput = ({
       <label htmlFor={name} className={labelClasses}>
         {label}
       </label>
-      <select
+      <input
+        type="file"
         onChange={changeHandler}
+        onBlur={handleBlur}
         name={name}
         id={name}
-        className={selectClasses}
-        value={value}
+        className={inputClasses}
         multiple={isMultiple}
-      >
-        {options.map((itm: Option) => (
-          <option key={itm.id} value={itm.value} className="capitalize">
-            {itm.label}
-          </option>
-        ))}
-      </select>
-      <div className="mt-2">
-        {error && <span className="text-red-500">{error}</span>}
-      </div>
+        accept="image/*"
+      />
+      {error && <span className="text-red-500">{error}</span>}
     </>
   );
 };
 
-export default SelectInput;
+export default FileInput;

@@ -6,11 +6,15 @@ import { IoIosSend } from "react-icons/io";
 
 type Props = {
   title: string;
+  type?: "submit" | "button";
 };
 
-const Button = ({ title }: Props) => {
+const Button = ({ title, type }: Props) => {
   return (
-    <button className="uppercase relative  text-white font-bold bg-lightPrimary border border-lightPrimary dark:bg-tertiary dark:border-tertiary transition-all duration-200 ease-linear rounded-lg min-w-[9.688rem] max-w-[15rem] max-h-[3rem] px-4 py-4 leading-[21px] overflow-hidden group flex flex-col justify-center items-center mx-6 lg:mx-0">
+    <button
+      type={type}
+      className="uppercase relative  text-white font-bold bg-lightPrimary border border-lightPrimary dark:bg-tertiary dark:border-tertiary transition-all duration-200 ease-linear rounded-lg min-w-[9.688rem] max-w-[15rem] max-h-[3rem] px-4 py-4 leading-[21px] overflow-hidden group flex flex-col justify-center items-center mx-6 lg:mx-0"
+    >
       <span className="group-hover:translate-y-[-100px] duration-300 ease-linear transition-all group-hover:duration-300 group-hover:ease-linear group-hover:transition-all ">
         {title}
       </span>

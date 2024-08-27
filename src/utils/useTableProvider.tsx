@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import { ITEMS_PER_PAGE } from "@/utils/constants";
 
 interface Props<T extends Record<string, any>> {

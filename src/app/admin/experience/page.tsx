@@ -3,23 +3,22 @@
 import SelectInput from "@/components/admin/inputs/SelectInput";
 import TextInput from "@/components/admin/inputs/TextInput";
 import React, { useState } from "react";
-import {
-  experienceLists,
-  categoriesOptions,
-  type ExperienceList,
-} from "@/utils/data/Experience";
+import { experienceLists, type ExperienceList } from "@/utils/data/Experience";
+import { experienceOptions } from "@/utils/data/SelectOptions";
 import ActionButton from "@/components/admin/ActionButton";
 import TableLayout from "@/components/admin/TableLayout";
 import { TableContextProvider } from "@/utils/useTableProvider";
 import Modal from "@/components/admin/Modal";
 
-import { skillSchema } from "@/utils/schema/Schema";
+import { experienceSchema } from "@/utils/schema/Schema";
 
 import { useFormik } from "formik";
-import { AnimatePresence, motion } from "framer-motion";
+
 import Button from "@/components/admin/Button";
 import DeleteModal from "@/components/admin/modal/DeleteModal";
-// import { useTruncateText } from "@/utils/useTextTruncate";
+import ExperienceViewModal from "@/components/admin/modal/ExperienceViewModal";
+import Textarea from "@/components/admin/inputs/Textarea";
+// import { useResponsiveMaxLength } from "@/utils/useResponsiveMaxLength";
 
 type Props = {};
 
@@ -38,10 +37,14 @@ const Page = (props: Props) => {
     sortBy: "type",
   });
 
+  // const responsiveMaxLength = useResponsiveMaxLength(100);
+
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
+  const [isViewModalOpen, setViewModalOpen] = useState<boolean>(false);
   const [isDeleteModalOpen, setDeleteModalOpen] = useState<boolean>(false);
   const [editItem, setEditItem] = useState<ExperienceList | null>(null);
   const [deleteItem, setDeleteItem] = useState<string | null>(null);
+  const [viewItem, setViewItem] = useState<ExperienceList | null>(null);
 
   const {
     values,
@@ -54,16 +57,17 @@ const Page = (props: Props) => {
     touched,
   } = useFormik({
     initialValues: {
-      category: "",
       title: "",
-      iconFamily: "",
-      iconName: "",
+      type: "",
+      start: "",
+      end: "",
+      description: "",
     },
     onSubmit: (value) => {
       console.log(value);
       resetForm();
     },
-    validationSchema: skillSchema,
+    validationSchema: experienceSchema,
   });
 
   const truncateText = ({
@@ -83,16 +87,28 @@ const Page = (props: Props) => {
     setModalOpen(false);
     resetForm();
   };
+
+  const handleViewButtonClick = (item: ExperienceList) => {
+    setViewItem(item);
+    setViewModalOpen(true);
+  };
+
+  const handleViewModalClose = () => {
+    setViewModalOpen(false);
+    setViewItem(null);
+  };
+
   const addButtonClickHandler = () => {
     setModalOpen(true);
   };
   const editHandler = (item: ExperienceList) => {
-    // setFieldValue("category", item.category);
-    // setFieldValue("title", item.title);
-    // setFieldValue("iconFamily", item.iconFamily);
-    // setFieldValue("iconName", item.iconName);
-    // setEditItem(item);
-    // setModalOpen(true);
+    setFieldValue("title", item.title);
+    setFieldValue("type", item.type);
+    setFieldValue("start", item.start);
+    setFieldValue("end", item.end);
+    setFieldValue("description", item.description);
+    setEditItem(item);
+    setModalOpen(true);
   };
 
   const deleteHandler = (id: string) => {
@@ -110,7 +126,7 @@ const Page = (props: Props) => {
   };
 
   return (
-    <section className="px-2">
+    <section className="px-2 w-full overflow-hidden">
       <TableLayout
         tableHeader="Experiences"
         searchQuery={searchQuery}
@@ -138,28 +154,42 @@ const Page = (props: Props) => {
           >
             <td className="px-6 py-4">{startIndex + index + 1}</td>
             <th className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              {truncateText({ text: experience.title, maxLength: 20 })}
+              {truncateText({
+                text: experience.title,
+                maxLength: 10,
+              })}
             </th>
             <td className="px-6 py-4">{experience.type}</td>
             <td className="px-6 py-4">{experience.start}</td>
             <td className="px-6 py-4">{experience.end}</td>
             <td className="px-6 py-4">
-              {truncateText({ text: experience.description, maxLength: 30 })}
+              {truncateText({
+                text: experience.description,
+                maxLength: 15,
+              })}
             </td>
             <td className="px-6 py-4">
               <ActionButton
                 editButtonClickHandler={() => editHandler(experience)}
                 deleteButtonClickHandler={() => deleteHandler(experience.id)}
                 view={true}
-                viewButtonClickHandler={() => console.log("clicked")}
+                viewButtonClickHandler={() => handleViewButtonClick(experience)}
               />
             </td>
           </tr>
         ))}
       </TableLayout>
 
+      {viewItem && (
+        <ExperienceViewModal
+          isViewModalOpen={isViewModalOpen}
+          handleViewModalClose={handleViewModalClose}
+          viewItem={viewItem}
+        />
+      )}
+
       {/* Add and Edit Modal start */}
-      {/* <Modal
+      <Modal
         onClose={handleClose}
         headerColor="text-lightPrimary dark:text-tertiary"
         headerText={editItem ? "Edit Item" : "Add Item"}
@@ -167,19 +197,9 @@ const Page = (props: Props) => {
         isOpen={isModalOpen}
       >
         <form
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 px-4 pb-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 px-6 pb-8"
           onSubmit={handleSubmit}
         >
-          <div>
-            <SelectInput
-              name="category"
-              label="Category"
-              changeHandler={handleChange}
-              options={skillCategories}
-              value={values.category}
-              error={touched.category && errors.category}
-            />
-          </div>
           <div>
             <TextInput
               name="title"
@@ -193,45 +213,67 @@ const Page = (props: Props) => {
             />
           </div>
           <div>
-            <TextInput
-              name="iconFamily"
-              label="Icon Family"
-              type="text"
-              handleBlur={handleBlur}
+            <SelectInput
+              name="type"
+              label="Type"
               changeHandler={handleChange}
-              value={values.iconFamily}
-              placeholder="Enter icon name..."
-              error={touched.iconFamily && errors.iconFamily}
+              options={experienceOptions}
+              value={values.type}
+              error={touched.type && errors.type}
             />
           </div>
           <div>
             <TextInput
-              name="iconName"
-              label="Icon Name"
+              name="start"
+              label="Star Date"
               type="text"
               handleBlur={handleBlur}
               changeHandler={handleChange}
-              value={values.iconName}
-              placeholder="Enter icon Name..."
-              error={errors.iconName}
+              value={values.start}
+              placeholder="Enter month (in short) and Full Year..."
+              error={touched.start && errors.start}
+            />
+          </div>
+          <div>
+            <TextInput
+              name="end"
+              label="End Date"
+              type="text"
+              handleBlur={handleBlur}
+              changeHandler={handleChange}
+              value={values.end}
+              placeholder="Enter month (in short) and Full Year..."
+              error={touched.end && errors.end}
+            />
+          </div>
+          <div className="md:col-span-2">
+            <Textarea
+              name="description"
+              label="Description"
+              handleBlur={handleBlur}
+              changeHandler={handleChange}
+              value={values.description}
+              placeholder="Enter Description..."
+              row={5}
+              error={touched.description && errors.description}
             />
           </div>
           <div className="md:col-span-2 flex justify-center">
             <Button title="Submit" />
           </div>
         </form>
-      </Modal> */}
+      </Modal>
       {/* Add and Edit Modal end */}
 
       {/* Delete Modal start*/}
-      {/* <DeleteModal
+      <DeleteModal
         isDeleteModalOpen={isDeleteModalOpen}
         setDeleteItem={setDeleteItem}
         setDeleteModalOpen={setDeleteModalOpen}
         handleCancelButtonClick={handleCancelButtonClick}
         handleDeleteButtonClick={handleDeleteButtonClick}
         title="experience"
-      /> */}
+      />
       {/* Delete Modal end*/}
     </section>
   );

@@ -3,30 +3,31 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 import classNames from "classNames";
-import { type Option } from "@/utils/data/SelectOptions";
 
 type Props = {
   name: string;
   label: string;
   labelClass?: string;
   inputClassNames?: string;
-  changeHandler: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  options: Array<Option>;
-  error?: string | boolean | undefined | string[];
-  value: string | string[];
-  isMultiple?: boolean;
+  changeHandler: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  handleBlur: (e: React.FocusEvent<HTMLTextAreaElement>) => void;
+  value: string;
+  placeholder: string;
+  error?: string | boolean | undefined;
+  row: number;
 };
 
-const SelectInput = ({
+const Textarea = ({
   name,
   label,
   labelClass,
   inputClassNames,
+  handleBlur,
   changeHandler,
-  options,
-  error,
   value,
-  isMultiple,
+  placeholder,
+  error,
+  row,
 }: Props) => {
   const labelClasses = twMerge(
     "capitalize",
@@ -36,50 +37,45 @@ const SelectInput = ({
     labelClass
   );
 
-  const selectClasses = twMerge(
+  const inputClasses = twMerge(
     "w-full",
-    "block",
+    "inline-block",
     "text-sm",
     "py-2",
     "px-4",
+    "outline-0",
     "border",
     "border-lightPrimary",
     "dark:border-tertiary",
-    "outline-0",
     "rounded-lg",
     "mt-2",
     "md:mt-2.5",
     "lg:mt-3",
-    "capitalize",
     "focus:border-tertiary",
     "bg-white",
     "text-darkPrimary",
     "placeholder:text-darkPrimary",
+    "resize-none",
     inputClassNames,
     classNames({
       "text-red-500 placeholder:text-red-500 border-red-500": error,
     })
   );
-
   return (
     <>
       <label htmlFor={name} className={labelClasses}>
         {label}
       </label>
-      <select
-        onChange={changeHandler}
+      <textarea
         name={name}
-        id={name}
-        className={selectClasses}
         value={value}
-        multiple={isMultiple}
-      >
-        {options.map((itm: Option) => (
-          <option key={itm.id} value={itm.value} className="capitalize">
-            {itm.label}
-          </option>
-        ))}
-      </select>
+        onChange={changeHandler}
+        onBlur={handleBlur}
+        rows={row}
+        id={name}
+        placeholder={placeholder}
+        className={inputClasses}
+      />
       <div className="mt-2">
         {error && <span className="text-red-500">{error}</span>}
       </div>
@@ -87,4 +83,4 @@ const SelectInput = ({
   );
 };
 
-export default SelectInput;
+export default Textarea;

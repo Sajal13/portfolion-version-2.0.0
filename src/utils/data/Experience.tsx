@@ -9,30 +9,6 @@ export interface ExperienceList {
   description: string;
 }
 
-export interface Option {
-  id: string;
-  value: string;
-  label: string;
-}
-
-export const categoriesOptions: Option[] = [
-  {
-    id: "1",
-    value: "",
-    label: "Select Category",
-  },
-  {
-    id: "2",
-    value: "1",
-    label: "Education",
-  },
-  {
-    id: "3",
-    value: "2",
-    label: "Experience",
-  },
-];
-
 export const experienceLists: ExperienceList[] = [
   {
     id: uuid(),
