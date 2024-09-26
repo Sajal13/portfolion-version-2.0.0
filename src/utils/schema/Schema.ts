@@ -47,3 +47,23 @@ export const portfolioSchema = yup.object({
     )
     .min(1),
 });
+
+export const blogSchema = yup.object({
+  title: yup.string().required("Title is required."),
+  file: yup.mixed().nullable(),
+  tags: yup
+    .array()
+    .required("Tags is required.")
+    .min(1, "Minimum 1 tag is required."),
+});
+
+export const loginSchema = yup.object({
+  email: yup
+    .string()
+    .email("Email must be a valid email")
+    .required("Email is required."),
+  password: yup
+    .string()
+    .min(6, "Password must be at least 6 characters")
+    .required("password is required."),
+});

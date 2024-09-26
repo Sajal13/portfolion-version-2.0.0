@@ -13,6 +13,7 @@ type Props = {
   handleBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
   isMultiple?: boolean;
   error?: string | boolean | undefined | string[];
+  accept?: "image/*" | ".md";
 };
 
 const FileInput = ({
@@ -24,6 +25,7 @@ const FileInput = ({
   changeHandler,
   isMultiple = false,
   error,
+  accept = "image/*",
 }: Props) => {
   const labelClasses = twMerge(
     "capitalize",
@@ -69,7 +71,7 @@ const FileInput = ({
         id={name}
         className={inputClasses}
         multiple={isMultiple}
-        accept="image/*"
+        accept={accept}
       />
       {error && <span className="text-red-500">{error}</span>}
     </>

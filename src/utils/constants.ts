@@ -105,4 +105,9 @@ export const adminSideNavItems: AdminSideNavItem[] = [
     label: "blogs",
     link: "/admin/blogs",
   },
+  {
+    id: uuid(),
+    label: "messages",
+    link: "/admin/message",
+  },
 ];

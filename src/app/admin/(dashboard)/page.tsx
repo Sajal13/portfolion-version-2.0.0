@@ -7,6 +7,7 @@ import { BsTools } from "react-icons/bs";
 import { MdOutlineWork } from "react-icons/md";
 import { TbBriefcase } from "react-icons/tb";
 import { ImBlogger } from "react-icons/im";
+import { BiSolidMessage } from "react-icons/bi";
 
 import { tableData } from "@/utils/data/Skills";
 
@@ -116,7 +117,7 @@ const Page = (props: Props) => {
         <Card
           url="/admin/experience"
           length={4}
-          title="Experience"
+          title="Experiences"
           bgColor="bg-tertiary"
           icons={<MdOutlineWork />}
           transition={{
@@ -127,7 +128,7 @@ const Page = (props: Props) => {
         <Card
           url="/admin/portfolio"
           length={4}
-          title="Portfolio"
+          title="Portfolios"
           bgColor="bg-success"
           icons={<TbBriefcase />}
           transition={{
@@ -141,6 +142,17 @@ const Page = (props: Props) => {
           title="Blogs"
           bgColor="bg-[#F29000]"
           icons={<ImBlogger />}
+          transition={{
+            duration: 0.3,
+            delay: 1.4,
+          }}
+        />
+        <Card
+          url="/admin/messages"
+          length={0}
+          title="Messages"
+          bgColor="bg-[#5A72A0]"
+          icons={<BiSolidMessage />}
           transition={{
             duration: 0.3,
             delay: 1.4,
