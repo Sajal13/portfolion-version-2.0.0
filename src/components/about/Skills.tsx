@@ -1,7 +1,7 @@
 'use client'
 
 import React, { Fragment } from "react";
-import { skills } from "@/utils/constant";
+import { skills } from "@/utils/data/Skills";
 import SkillCard from "./SkillCard";
 import SectionHeader from "../shared/SectionHeader";
 

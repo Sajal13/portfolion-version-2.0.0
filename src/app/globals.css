@@ -256,3 +256,7 @@ select {
     stroke-dashoffset: -351.86;
   }
 }
+
+.cardClipBox{
+  clip-path: polygon(0 0, 100% 0, 50% 50%, 0% 100%);
+}
