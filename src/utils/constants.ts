@@ -17,19 +17,19 @@ export const timelineItems: Array<Timelines> = [
       "Graduated from here in 2022. Completed Bachelor in Technology major in Computer Sciecnce and Engineering.",
     type: 1,
   },
-  {
-    id: 3,
-    title: "InNeed Intelligence Cloud, Dhaka",
-    duration: "Jan 2023 - Dec 2023",
-    description: `Joined InNeed Intellignece Cloud as a Junior Front-End Developer. Worked on different client.
-    Technology used (Svelte, Sveltkit, Astro, VueJs, TailwindCSS, Vuetify).
-    `,
-    type: 2,
-  },
+  // {
+  //   id: 3,
+  //   title: "InNeed Intelligence Cloud, Dhaka",
+  //   duration: "Jan 2023 - Dec 2023",
+  //   description: `Joined InNeed Intellignece Cloud as a Junior Front-End Developer. Worked on different client.
+  //   Technology used (Svelte, Sveltkit, Astro, VueJs, TailwindCSS, Vuetify).
+  //   `,
+  //   type: 2,
+  // },
   {
     id: 4,
     title: "Technext It Limited",
-    duration: "Jan 2024 - Present",
+    duration: "June 2023 - Present",
     description: `Joined TechnextIt as a Junior Front-End Developer. Working on Template Designing for Bootstrap Marketplace.
     Technology uses (Pug, Bootstrap 5, ReactJs)`,
     type: 2,
@@ -507,44 +507,44 @@ export const portfolioItems: Array<PortfolioItem> = [
       },
     ]
   },
-  {
-    id: uuid(),
-    category: ["vuejs", 'vuetify', 'html', 'css'],
-    title: 'iPICS',
-    thumbnail: '/assets/images/projects/ipics/ipics_1.png',
-    masonryImage: '/assets/images/projects/ipics/ipics.webp',
-    images: [
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/ipics/ipics_1.png'
-      },
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/ipics/ipics_2.png'
-      },
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/ipics/ipics_3.png'
-      },
-    ],
-    projectTitle: 'INFORMATIVE WEBSITE FOR CANCER PATIENT',
-    language: ["Html", "css", "vuetify","vuejs"],
-    link: 'https://ipics.life/',
-    description: [
-      {
-        id: uuid(),
-        text: "iPICS website is for cancer patients awarness and training system. The client was University of North Carolina at Chapel Hill."
-      },
-      {
-        id: uuid(),
-        text: "Worked fully dynamic responsive website using VueJS and Vuetify."
-      },
-      {
-        id: uuid(),
-        text: "Implemented different module using vuejs"
-      },
-    ]
-  },
+  // {
+  //   id: uuid(),
+  //   category: ["vuejs", 'vuetify', 'html', 'css'],
+  //   title: 'iPICS',
+  //   thumbnail: '/assets/images/projects/ipics/ipics_1.png',
+  //   masonryImage: '/assets/images/projects/ipics/ipics.webp',
+  //   images: [
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/ipics/ipics_1.png'
+  //     },
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/ipics/ipics_2.png'
+  //     },
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/ipics/ipics_3.png'
+  //     },
+  //   ],
+  //   projectTitle: 'INFORMATIVE WEBSITE FOR CANCER PATIENT',
+  //   language: ["Html", "css", "vuetify","vuejs"],
+  //   link: 'https://ipics.life/',
+  //   description: [
+  //     {
+  //       id: uuid(),
+  //       text: "iPICS website is for cancer patients awarness and training system. The client was University of North Carolina at Chapel Hill."
+  //     },
+  //     {
+  //       id: uuid(),
+  //       text: "Worked fully dynamic responsive website using VueJS and Vuetify."
+  //     },
+  //     {
+  //       id: uuid(),
+  //       text: "Implemented different module using vuejs"
+  //     },
+  //   ]
+  // },
   {
     id: uuid(),
     category: ["Astro", 'tailwindcss', 'html', 'css', "typescript"],
@@ -595,92 +595,92 @@ export const portfolioItems: Array<PortfolioItem> = [
       },
     ]
   },
-  {
-    id: uuid(),
-    category: ["svelte", 'tailwindcss', 'html', 'css', "typescript"],
-    title: 'Biz-InNeed',
-    thumbnail: '/assets/images/projects/biz_inneed/biz_inneed_1.png',
-    masonryImage: '/assets/images/projects/biz_inneed/bizInneed.webp',
-    images: [
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/biz_inneed/biz_inneed_1.png'
-      },
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/biz_inneed/biz_inneed_2.png'
-      },
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/biz_inneed/biz_inneed_3.png'
-      },
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/biz_inneed/biz_inneed_4.png'
-      },
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/biz_inneed/biz_inneed_5.png'
-      },
-    ],
-    projectTitle: 'Business Management for InNeed Intelligence Cloud',
-    language: ["Html", "css", "tailwindcss","svelte", "Typescript"],
-    link: 'https://bizinneed.com/',
-    description: [
-      {
-        id: uuid(),
-        text: "Biz-InNeed is a Business website for InNeed Intelligence Cloud"
-      },
-      {
-        id: uuid(),
-        text: "Created  responsive website using svelte, typescript and tailwindcss."
-      }
-    ]
-  },
-  {
-    id: uuid(),
-    category: ['tailwindcss', 'html', 'css', "javascript"],
-    title: 'Jp-InNeed',
-    thumbnail: '/assets/images/projects/jp_inneed/jp_inneed_1.png',
-    masonryImage: '/assets/images/projects/jp_inneed/jpInneed.webp',
-    images: [
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/jp_inneed/jp_inneed_1.png'
-      },
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/jp_inneed/jp_inneed_2.png'
-      },
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/jp_inneed/jp_inneed_3.png'
-      },
-      {
-        id: uuid(),
-        imageSrc: '/assets/images/projects/jp_inneed/jp_inneed_4.png'
-      },
-    ],
-    projectTitle: 'InNeed Intelligence Cloud for Japan',
-    language: ["Html", "css", "tailwindcss","Javscript"],
-    link: 'https://jp.inneed.cloud/',
-    description: [
-      {
-        id: uuid(),
-        text: "JpInNeed is a portfolio website for InNeed Intelligence cloud for Japan region."
-      },
-      {
-        id: uuid(),
-        text: "Created responsive website using html, css, javascript and tailwindcss."
-      },
-      {
-        id: uuid(),
-        text: "Implemented animation using wowjs and animateJs"
-      },
-      {
-        id: uuid(),
-        text: "Implemented custom email sertver"
-      }
-    ]
-  },
+  // {
+  //   id: uuid(),
+  //   category: ["svelte", 'tailwindcss', 'html', 'css', "typescript"],
+  //   title: 'Biz-InNeed',
+  //   thumbnail: '/assets/images/projects/biz_inneed/biz_inneed_1.png',
+  //   masonryImage: '/assets/images/projects/biz_inneed/bizInneed.webp',
+  //   images: [
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/biz_inneed/biz_inneed_1.png'
+  //     },
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/biz_inneed/biz_inneed_2.png'
+  //     },
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/biz_inneed/biz_inneed_3.png'
+  //     },
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/biz_inneed/biz_inneed_4.png'
+  //     },
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/biz_inneed/biz_inneed_5.png'
+  //     },
+  //   ],
+  //   projectTitle: 'Business Management for InNeed Intelligence Cloud',
+  //   language: ["Html", "css", "tailwindcss","svelte", "Typescript"],
+  //   link: 'https://bizinneed.com/',
+  //   description: [
+  //     {
+  //       id: uuid(),
+  //       text: "Biz-InNeed is a Business website for InNeed Intelligence Cloud"
+  //     },
+  //     {
+  //       id: uuid(),
+  //       text: "Created  responsive website using svelte, typescript and tailwindcss."
+  //     }
+  //   ]
+  // },
+  // {
+  //   id: uuid(),
+  //   category: ['tailwindcss', 'html', 'css', "javascript"],
+  //   title: 'Jp-InNeed',
+  //   thumbnail: '/assets/images/projects/jp_inneed/jp_inneed_1.png',
+  //   masonryImage: '/assets/images/projects/jp_inneed/jpInneed.webp',
+  //   images: [
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/jp_inneed/jp_inneed_1.png'
+  //     },
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/jp_inneed/jp_inneed_2.png'
+  //     },
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/jp_inneed/jp_inneed_3.png'
+  //     },
+  //     {
+  //       id: uuid(),
+  //       imageSrc: '/assets/images/projects/jp_inneed/jp_inneed_4.png'
+  //     },
+  //   ],
+  //   projectTitle: 'InNeed Intelligence Cloud for Japan',
+  //   language: ["Html", "css", "tailwindcss","Javscript"],
+  //   link: 'https://jp.inneed.cloud/',
+  //   description: [
+  //     {
+  //       id: uuid(),
+  //       text: "JpInNeed is a portfolio website for InNeed Intelligence cloud for Japan region."
+  //     },
+  //     {
+  //       id: uuid(),
+  //       text: "Created responsive website using html, css, javascript and tailwindcss."
+  //     },
+  //     {
+  //       id: uuid(),
+  //       text: "Implemented animation using wowjs and animateJs"
+  //     },
+  //     {
+  //       id: uuid(),
+  //       text: "Implemented custom email sertver"
+  //     }
+  //   ]
+  // },
 ]
