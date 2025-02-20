@@ -103,7 +103,7 @@ const Page = (props: Props) => {
   return (
     <section className="px-2">
       <TableLayout
-        tableHeader="Blogs"
+        tableHeader="Messages"
         searchQuery={searchQuery}
         handleSearchChange={handleSearchChange}
         handlePrevious={handlePrevious}
@@ -111,7 +111,7 @@ const Page = (props: Props) => {
         currentPage={currentPage}
         totalPages={totalPages}
         length={paginatedData.length}
-        headers={["#", "Title", "File", "Tags", "Action"]}
+        headers={["#", "Name", "Sender", "Subject", "Message", "Action"]}
         handleAddButtonClick={addButtonClickHandler}
       >
         {paginatedData.length > 0 ? (
@@ -123,6 +123,7 @@ const Page = (props: Props) => {
               <td className="px-6 py-4">{startIndex + index + 1}</td>
               <td className="px-6 py-4">{blog.title}</td>
               <td className="px-6 py-4">{blog.file.name}</td>
+              <td className="px-6 py-4">{blog.title}</td>
               <td className="px-6 py-4">
                 <ul className="px-2 space-y-2 capitalize">
                   {blog.tags.map((item, index) => (

@@ -148,7 +148,7 @@ const Page = (props: Props) => {
           }}
         />
         <Card
-          url="/admin/messages"
+          url="/admin/message"
           length={0}
           title="Messages"
           bgColor="bg-[#5A72A0]"

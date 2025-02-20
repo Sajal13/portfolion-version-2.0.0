@@ -1,7 +1,7 @@
 import React, {PropsWithChildren} from 'react'
 import { Metadata } from 'next'
 
-const metaData: Metadata = {
+export const metadata: Metadata = {
   title: "Sajal Das || Log in",
   description:
     "Explore the professional portfolio of Sajal Das, a skilled Front-End Developer with expertise in React, Next.js, JavaScript, and modern web technologies. Discover projects, case studies, and the creative journey of a developer passionate about building responsive, user-friendly web applications.",

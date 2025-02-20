@@ -67,7 +67,7 @@ const Page = () => {
         <h4 className="text-3xl md:text-4xl lg:text-5xl leading-[1.2] text-lightPrimary dark:text-tertiary mb-8 md:mb-10 font-semibold">
           Log In
         </h4>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="min-w-[50%]">
           <TextInput
             name="email"
             label="Email Address"
