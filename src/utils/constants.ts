@@ -29,7 +29,7 @@ export const timelineItems: Array<Timelines> = [
   {
     id: 4,
     title: "Technext It Limited",
-    duration: "June 2023 - Present",
+    duration: "Jan 2024 - Present",
     description: `Joined TechnextIt as a Junior Front-End Developer. Working on Template Designing for Bootstrap Marketplace.
     Technology uses (Pug, Bootstrap 5, ReactJs)`,
     type: 2,
