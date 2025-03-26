@@ -26,7 +26,7 @@ const EducationAndExperience = (props: Props) => {
                 transition={{
                   duration: 1.5
                 }}
-                className="hidden md:block absolute border-[#0c151a]/20 dark:border-[#f2f2f2]/40 h-[calc(100%-30px)] border left-1/2 md:mb-[30px]"
+                className="hidden md:block absolute border-[#0c151a]/20 dark:border-[#f2f2f2]/40 !h-[calc(100%-30px)] border left-1/2 md:mb-[30px]"
               ></motion.div>
             </AnimatePresence>
             {timelineItems.map((item, index, array) => (

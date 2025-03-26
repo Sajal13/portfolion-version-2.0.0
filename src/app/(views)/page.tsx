@@ -52,7 +52,7 @@ export default function Home() {
                     </motion.button>
                   </Link>
                   <Link
-                    href={"/assets/pdf/CV-for-Sajal-Das.pdf"}
+                    href={"/assets/pdf/sajal_das_front_end_developer.pdf"}
                     download={true}
                     target="_blank"
                   >
