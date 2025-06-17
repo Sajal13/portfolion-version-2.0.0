@@ -55,7 +55,7 @@ const Objective = (props: Props) => {
                 and let&apos;s shape the future of the web together!
               </motion.p>
               <Link
-                href={"/assets/pdf/sajal_das_front_end_developer.pdf.pdf"}
+                href={"/assets/pdf/Sajal-Das-Frontend-Developer.pdf"}
                 download={true}
                 target="_blank"
               >
