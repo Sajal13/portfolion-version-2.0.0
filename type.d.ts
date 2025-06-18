@@ -25,7 +25,6 @@ interface Description {
 
 interface PortfolioItem {
   id: string;
-  category: Array<string>;
   title: string;
   thumbnail: string;
   masonryImage: string;
@@ -33,5 +32,11 @@ interface PortfolioItem {
   projectTitle: string;
   language: Array<string>;
   description: Array<Description>;
+  link: string;
+}
+
+interface AdminSideNavItem {
+  id: string;
+  label: string;
   link: string;
 }

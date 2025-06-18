@@ -2,9 +2,10 @@
 
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { type Skill} from '@/utils/data/Skills'
 
 type Props = {
-  item: any;
+  item: Skill;
 };
 
 const SkillCard = ({ item }: Props) => {
@@ -21,7 +22,7 @@ const SkillCard = ({ item }: Props) => {
           }}
           className="text-2xl md:text-3xl lg:text-4xl font-bold text-lightSecondary dark:text-darkSecondary uppercase mb-7 sm:mb-8 md:mb-10 xl:mb-14 text-center"
         >
-          {item.header}
+          {item.category}
         </motion.h3>
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 sm:gap-8 md:gap-12 xl:gap-14 overflow-hidden">
           {item.skillSet.map((skill: any, index: number) => (
