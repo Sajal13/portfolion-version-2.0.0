@@ -1,17 +1,15 @@
 "use client";
 
-import React, { Fragment } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import SectionHeader from "../shared/SectionHeader";
+import { Fragment } from "react";
+import { motion } from "framer-motion";
+import SectionHeader from "../../shared/SectionHeader";
 import { MdSimCardDownload } from "react-icons/md";
 import Link from "next/link";
 
-type Props = {};
-
-const Objective = (props: Props) => {
+const Objective = () => {
   return (
-    <Fragment>
-      <AnimatePresence>
+    <>
+      <Fragment key="objective-section">
         <SectionHeader sectionText="Objective" absoluteText="profile" />
         <section className="container mx-auto pt-10 md:pt-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6 mb-10 md:mb-14 lg:mb-128">
@@ -55,7 +53,7 @@ const Objective = (props: Props) => {
                 and let&apos;s shape the future of the web together!
               </motion.p>
               <Link
-                href={"/assets/pdf/Sajal-das-CV.pdf"}
+                href={"/assets/pdf/Sajal-Das-Front-End-Developer.pdf"}
                 download={true}
                 target="_blank"
               >
@@ -77,8 +75,8 @@ const Objective = (props: Props) => {
             </div>
           </div>
         </section>
-      </AnimatePresence>
-    </Fragment>
+      </Fragment>
+    </>
   );
 };
 

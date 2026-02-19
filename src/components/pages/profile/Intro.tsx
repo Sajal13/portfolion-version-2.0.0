@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
-import SectionHeader from "../shared/SectionHeader";
+import SectionHeader from "@/components/shared/SectionHeader";
 
 const Intro = () => {
   return (

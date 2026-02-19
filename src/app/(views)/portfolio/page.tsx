@@ -1,21 +1,13 @@
-"use client";
+import ProfileContainer from "@/components/pages/profile";
+import { Metadata } from "next";
 
-import React from "react";
-import Intro from "@/components/profile/Intro";
-import ProjectItems from "@/components/profile/ProjectItems";
-import Layout from "@/layouts/Layout";
+export const metadata: Metadata = {
+  title: "My Works",
+  description: "A showcase of my projects and achievements"
+};
 
-type Props = {};
-
-const Page = (props: Props) => {
-  return (
-    <Layout pageTitle="Sajal Das || My Works">
-      <main className="container mx-auto mb-6 md:mb-10 lg:mb-14">
-        <Intro />
-        <ProjectItems />
-      </main>
-    </Layout>
-  );
+const Page = () => {
+  return <ProfileContainer />;
 };
 
 export default Page;

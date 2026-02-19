@@ -3,7 +3,7 @@
 import React, { Fragment } from "react";
 import { timelineItems } from "@/utils/constants";
 import Card from "./Card";
-import SectionHeader from "../shared/SectionHeader";
+import SectionHeader from "../../shared/SectionHeader";
 import { AnimatePresence, motion } from "framer-motion";
 
 type Props = {};

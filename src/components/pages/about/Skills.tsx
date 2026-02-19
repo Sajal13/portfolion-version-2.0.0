@@ -3,7 +3,7 @@
 import React, { Fragment } from "react";
 import { skills } from "@/utils/constant";
 import SkillCard from "./SkillCard";
-import SectionHeader from "../shared/SectionHeader";
+import SectionHeader from "../../shared/SectionHeader";
 
 type Props = {};
 

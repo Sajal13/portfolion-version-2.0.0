@@ -1,13 +1,12 @@
 "use client";
 
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-import SectionHeader from "../shared/SectionHeader";
+import SectionHeader from "@/components/shared/SectionHeader";
 
-type Props = {};
 
-const Intro = (props: Props) => {
+const Intro = () => {
   return (
     <Fragment>
       <SectionHeader sectionText="support" absoluteText="service" />
