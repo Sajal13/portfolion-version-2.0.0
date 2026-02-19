@@ -308,6 +308,172 @@ export const portfolioItems: Array<PortfolioItem> = [
   },
   {
     id: uuid(),
+    category: ["html", "css", "pug", "bootstrap", "javascript", 'reactjs'],
+    title: "Phoenix (HTML + ReactJS)",
+    thumbnail: "/assets/images/projects/phoenix/1.webp",
+    masonryImage: "/assets/images/projects/phoenix/large_1.webp",
+    images: [
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/phoenix/1.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/phoenix/2.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/phoenix/3.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/phoenix/4.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/phoenix/5.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/phoenix/6.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/phoenix/7.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/phoenix/8.webp"
+      }
+    ],
+    projectTitle: "Phoenix (HTML + ReactJS)",
+    language: ["Html", "css", "Pug", "Bootstrap", "JavaScript", 'ReactJS'],
+    link: "https://phoenix-react.prium.me/",
+    description: [
+      {
+        id: uuid(),
+        text: "Phoenix is a template for Bootstrap Template build on html and reactjs. Where a user can download this, use and modify the code to develop their own."
+      },
+      {
+        id: uuid(),
+        text: "Created Responsive Bootstrap Template using Bootstrap 5"
+      },
+      {
+        id: uuid(),
+        text: "Worked on creating Project using gulp and pug and reactjs."
+      },
+      {
+        id: uuid(),
+        text: "Implemented SwiperJs for sliders."
+      },
+    ]
+  },
+  {
+    id: uuid(),
+    category: ["html", "css", "pug", "bootstrap", "javascript", 'reactjs'],
+    title: "Falcon (HTML + ReactJS)",
+    thumbnail: "/assets/images/projects/falcon/1.webp",
+    masonryImage: "/assets/images/projects/falcon/large_1.webp",
+    images: [
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/falcon/1.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/falcon/2.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/falcon/3.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/falcon/4.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/falcon/5.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/falcon/6.webp"
+      }
+    ],
+    projectTitle: "Falcon (HTML + ReactJS)",
+    language: ["Html", "css", "Pug", "Bootstrap", "JavaScript", 'ReactJS'],
+    link: "https://falconreact.prium.me/",
+    description: [
+      {
+        id: uuid(),
+        text: "Falcon is a template for Bootstrap Template build on html and reactjs."
+      },
+      {
+        id: uuid(),
+        text: "Developed Multiple Module using ReactJS and Bootstrap 5"
+      },
+      {
+        id: uuid(),
+        text: "Maintained and updated the project using gulp and pug and reactjs."
+      },
+      {
+        id: uuid(),
+        text: "Implemented Full Calendar for Calendar view."
+      },
+    ]
+  },
+  {
+    id: uuid(),
+    category: ["html", "css", "pug", "bootstrap", "javascript"],
+    title: "Sparrow",
+    thumbnail: "/assets/images/projects/sparrow/1.webp",
+    masonryImage: "/assets/images/projects/sparrow/large_1.webp",
+    images: [
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/sparrow/1.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/sparrow/2.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/sparrow/3.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/sparrow/4.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/sparrow/5.webp"
+      },
+      {
+        id: uuid(),
+        imageSrc: "/assets/images/projects/sparrow/6.webp"
+      }
+    ],
+    projectTitle: "Sparrow",
+    language: ["Html", "css", "Pug", "Bootstrap", "JavaScript"],
+    link: "https://prium.github.io/twbs-sparrow/v2.5.0/index.html",
+    description: [
+      {
+        id: uuid(),
+        text: "Sparrow is a template for Bootstrap Template."
+      },
+      {
+        id: uuid(),
+        text: "Developed Multiple Module using Html, Css, Pug and Bootstrap 5"
+      },
+      {
+        id: uuid(),
+        text: "Maintained and updated the project using gulp and pug."
+      },
+    ]
+  },
+  {
+    id: uuid(),
     category: ["html", "css", "pug", "bootstrap", "javascript"],
     title: "POSH",
     thumbnail: "/assets/images/projects/posh/posh_1.png",
@@ -352,7 +518,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     description: [
       {
         id: uuid(),
-        text: "Posh is a template basicaly for Bootstrap marketplace. Where a user can download this, use and modify the code to develop their own."
+        text: "Posh is a template for Bootstrap marketplace. Where a user can download this, use and modify the code to develop their own."
       },
       {
         id: uuid(),
@@ -372,7 +538,7 @@ export const portfolioItems: Array<PortfolioItem> = [
       },
       {
         id: uuid(),
-        text: "Implemented Lighbox using BigPicture"
+        text: "Implemented Lightbox using BigPicture"
       },
       {
         id: uuid(),
@@ -422,7 +588,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     description: [
       {
         id: uuid(),
-        text: "Brainwave is a template basicaly for Bootstrap marketplace. Where a user can download this, use and modify the code to develop their own."
+        text: "Brainwave is a template for Bootstrap marketplace. Where a user can download this, use and modify the code to develop their own."
       },
       {
         id: uuid(),
@@ -484,7 +650,7 @@ export const portfolioItems: Array<PortfolioItem> = [
     description: [
       {
         id: uuid(),
-        text: "Aranyak is a template basicaly for Bootstrap marketplace. Where a user can download this, use and modify the code to develop their own."
+        text: "Aranyak is a template for Bootstrap marketplace. Where a user can download this, use and modify the code to develop their own."
       },
       {
         id: uuid(),

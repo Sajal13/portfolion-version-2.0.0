@@ -13,7 +13,7 @@ import { TiCss3 } from "react-icons/ti";
 import { IoLogoJavascript, IoLogoNodejs } from "react-icons/io";
 import { FaReact, FaPhp, FaLaravel, FaFigma } from "react-icons/fa";
 import { RiNextjsLine, RiSvelteLine, RiVuejsLine } from "react-icons/ri";
-import { SiExpress, SiMongodb, SiTailwindcss, SiRedux } from "react-icons/si";
+import { SiExpress, SiMongodb, SiTailwindcss, SiRedux, SiNestjs, SiPostgresql, SiPrisma, SiTypeorm } from "react-icons/si";
 import {
   TbBrandAstro,
   TbBrandBootstrap,
@@ -132,21 +132,6 @@ export const skills = [
         icon: <TbBrandAstro />,
       },
       {
-        id: 13,
-        title: "NodeJS",
-        icon: <IoLogoNodejs />,
-      },
-      {
-        id: 14,
-        title: "ExpressJS",
-        icon: <SiExpress />,
-      },
-      {
-        id: 15,
-        title: "Mongodb",
-        icon: <SiMongodb/>,
-      },
-      {
         id: 16,
         title: "Redux",
         icon: <SiRedux />,
@@ -168,24 +153,44 @@ export const skills = [
         icon: <FaLaravel />
       },
       {
-        id: 5245234,
-        title: 'Python',
-        icon: <AiOutlinePython />
+        id: 13,
+        title: "NodeJS",
+        icon: <IoLogoNodejs />,
+      },
+      {
+        id: 14,
+        title: "ExpressJS",
+        icon: <SiExpress />,
+      },
+      {
+        id: 15,
+        title: "Mongodb",
+        icon: <SiMongodb/>,
+      },
+      {
+        id: 8888,
+        title: "NestJS",
+        icon: <SiNestjs />,
+      },
+      {
+        id: 9999,
+        title: "PostgreSQL",
+        icon: <SiPostgresql />,
+      },
+      {
+        id: 101010,
+        title: "Prisma",
+        icon: <SiPrisma />,
+      },
+      {
+        id: 111111,
+        title: "TypeORM",
+        icon: <SiTypeorm />,
       },
       {
         id: 454425,
         title: 'Figma',
         icon: <FaFigma />
-      }, 
-      {
-        id: 235213,
-        title: "React Native",
-        icon: <FaReact />,
-      },
-      {
-        id: 235215343,
-        title: "CMS",
-        icon: <BsTools />,
       },
     ]
   }

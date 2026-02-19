@@ -21,10 +21,11 @@ import ImageSlider from "./ImageSlider";
 type Props = {
   projects: Array<PortfolioItem>;
   selectedProjectIndex: number | null;
+  isOpen: boolean;
   onClose: () => void;
 };
 
-const ProjectModal = ({ projects, selectedProjectIndex, onClose }: Props) => {
+const ProjectModal = ({ projects, selectedProjectIndex, isOpen, onClose }: Props) => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
 
   const projectPrevNav = useRef<HTMLButtonElement | null>(null);
@@ -47,6 +48,20 @@ const ProjectModal = ({ projects, selectedProjectIndex, onClose }: Props) => {
       swiper.slideTo(selectedProjectIndex, 0);
     }
   }, [swiper, selectedProjectIndex]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
+  if (!isOpen) return null;
 
   return (
     <div
@@ -80,7 +95,7 @@ const ProjectModal = ({ projects, selectedProjectIndex, onClose }: Props) => {
                 className="mySwiper"
                 navigation={{
                   nextEl: projectNextRef.current,
-                  prevEl: projectPrevNav.current,
+                  prevEl: projectPrevNav.current
                 }}
               >
                 {projects.map((project, index) => (
@@ -169,7 +184,7 @@ const ProjectModal = ({ projects, selectedProjectIndex, onClose }: Props) => {
                                 exit={{ x: 50, opacity: 0 }}
                                 transition={{
                                   duration: 0.5,
-                                  delay: 0.3 + 0.1 * index,
+                                  delay: 0.3 + 0.1 * index
                                 }}
                                 className=" bg-lightPrimary dark:bg-tertiary rounded-[1.25rem] px-4 py-2 text-lightSecondary dark:text-darkSecondary "
                                 key={index}
@@ -199,7 +214,7 @@ const ProjectModal = ({ projects, selectedProjectIndex, onClose }: Props) => {
                             exit={{ y: 50, opacity: 0 }}
                             transition={{
                               duration: 0.5,
-                              delay: 0.3 + 0.1 * index,
+                              delay: 0.3 + 0.1 * index
                             }}
                             key={descriptionItem.id}
                             className="text-lightSecondary dark:text-darkSecondary md:text-lg lg:text-xl py-1.5"
