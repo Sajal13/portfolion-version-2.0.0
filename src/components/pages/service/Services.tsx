@@ -1,7 +1,7 @@
 "use client";
 
-import React, { Fragment } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { Fragment } from "react";
+import {  motion } from "framer-motion";
 
 import { services } from "@/utils/constants";
 import ServiceCard from "./ServiceCard";

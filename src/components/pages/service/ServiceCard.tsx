@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 type Props = {
   title: string;
@@ -12,7 +11,7 @@ type Props = {
 
 const ServiceCard = ({ title, description, imageSrc, index }: Props) => {
   return (
-    <AnimatePresence>
+    <>
       <div className=" shadow-[0px_0px_30px_rgba(173,189,189,0.5)] rounded-[10px] group h-full">
         <div
           className={`relative overflow-hidden rounded-t-[10px] w-full max-h-[15.438rem] after:content-[' '] after:absolute after:left-0 after:top-0 after:z-10 after:w-full
@@ -45,7 +44,7 @@ const ServiceCard = ({ title, description, imageSrc, index }: Props) => {
           </motion.p>
         </div>
       </div>
-    </AnimatePresence>
+    </>
   );
 };
 

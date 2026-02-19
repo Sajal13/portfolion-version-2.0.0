@@ -1,21 +1,13 @@
-"use client";
-import React from "react";
-import Objective from "@/components/about/Objective";
-import EducationAndExperience from "@/components/about/EducationAndExperience";
-import Skills from "@/components/about/Skills";
-import Layout from "@/layouts/Layout";
+import AboutContainer from "@/components/pages/about";
+import { Metadata } from "next";
 
-type Props = {};
+export const metadata: Metadata = {
+  title: "About",
+}
 
-const Page = (props: Props) => {
+const Page = () => {
   return (
-    <Layout pageTitle="Sajal Das || About">
-      <main className="mb-6 md:mb-10">
-        <Objective />
-        <Skills />
-        <EducationAndExperience />
-      </main>
-    </Layout>
+    <AboutContainer />
   );
 };
 

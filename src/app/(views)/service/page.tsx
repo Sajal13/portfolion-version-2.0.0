@@ -1,20 +1,13 @@
-"use client";
 
-import React from "react";
-import Intro from "@/components/service/Intro";
-import Services from "@/components/service/Services";
-import Layout from "@/layouts/Layout";
+import ServiceContainer from "@/components/pages/service";
+import { Metadata } from "next";
 
-type Props = {};
-
-const Page = (props: Props) => {
+export const metadata: Metadata = {
+  title: "Services"
+}
+const Page = () => {
   return (
-    <Layout pageTitle="Sajal Das || Services">
-      <main className="container mx-auto">
-      <Intro />
-      <Services />
-    </main>
-    </Layout>
+    <ServiceContainer />
   );
 };
 
