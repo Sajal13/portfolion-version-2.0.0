@@ -67,13 +67,14 @@ const MasonryView = ({ filterKey }: Props) => {
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{
               scale: 1,
-              opacity: 1,
+              opacity: 1
             }}
             exit={{ scale: 0.85, opacity: 0 }}
             transition={{ duration: 0.4 }}
             className="fixed top-0 bottom-0 left-0 right-0 z-50"
           >
             <ProjectModal
+              isOpen={modalOpen}
               projects={filteredItems}
               selectedProjectIndex={selectedProjectIndex}
               onClose={handleModalClose}

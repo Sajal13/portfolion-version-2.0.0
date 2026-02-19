@@ -60,6 +60,7 @@ const GridView = ({ filterKey }: Props) => {
             className="fixed top-0 bottom-0 left-0 right-0 z-50"
           >
             <ProjectModal
+              isOpen={modalOpen}
               projects={filteredItems}
               selectedProjectIndex={selectedProjectIndex}
               onClose={handleModalClose}
