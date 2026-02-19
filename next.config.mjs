@@ -3,6 +3,8 @@ import { config } from 'dotenv';
 
 config();
 
-const nextConfig = {};
+const nextConfig = {
+  cacheComponents: true
+};
 
 export default nextConfig;
