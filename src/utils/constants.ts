@@ -17,27 +17,27 @@ export const timelineItems: Array<Timelines> = [
       "Graduated from here in 2022. Completed Bachelor in Technology major in Computer Sciecnce and Engineering.",
     type: 1
   },
-  {
-    id: 5,
-    title: "Evocation IT",
-    duration: "Oct 2022 - Jan 2023 (Contratual)",
-    description: `Working Contractually on different project for clients as a Front-End Developer. Technology used 
-    (ReactJs, Nextjs, TailwindCSS, MaterialUI).`,
-    type: 2
-  },
-  {
-    id: 3,
-    title: "InNeed Intelligence Cloud, Dhaka",
-    duration: "Jan 2023 - Dec 2023",
-    description: `Joined InNeed Intellignece Cloud as a Junior Front-End Developer. Worked on different client.
-    Technology used (Svelte, Sveltkit, Astro, VueJs, TailwindCSS, Vuetify).
-    `,
-    type: 2
-  },
+  // {
+  //   id: 5,
+  //   title: "Evocation IT",
+  //   duration: "Oct 2022 - Jan 2023 (Contratual)",
+  //   description: `Working Contractually on different project for clients as a Front-End Developer. Technology used 
+  //   (ReactJs, Nextjs, TailwindCSS, MaterialUI).`,
+  //   type: 2
+  // },
+  // {
+  //   id: 3,
+  //   title: "InNeed Intelligence Cloud, Dhaka",
+  //   duration: "Jan 2023 - Dec 2023",
+  //   description: `Joined InNeed Intellignece Cloud as a Junior Front-End Developer. Worked on different client.
+  //   Technology used (Svelte, Sveltkit, Astro, VueJs, TailwindCSS, Vuetify).
+  //   `,
+  //   type: 2
+  // },
   {
     id: 4,
     title: "Technext It Limited",
-    duration: "Jan 2024 - Present",
+    duration: "June 2023 - Present",
     description: `Joined TechnextIt as a Junior Front-End Developer. Working on Template Designing for Bootstrap Marketplace.
     Technology uses (Pug, SCSS, Bootstrap 5, ReactJs, MaterialUI and Other technologies)`,
     type: 2
