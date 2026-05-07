@@ -32,7 +32,7 @@ const HomeContainer = () => {
                   Sajal Das
                 </h4>
                 <p className="text-lg md:text-[22px] xl:text-3xl md:leading-[1.5] text-lightSecondary dark:text-darkSecondary">
-                  A Web Developer
+                  A Software Engineer.
                 </p>
               </motion.div>
 

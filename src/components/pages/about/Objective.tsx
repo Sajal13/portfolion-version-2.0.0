@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 import SectionHeader from "../../shared/SectionHeader";
 import { MdSimCardDownload } from "react-icons/md";
 import Link from "next/link";
+import { getExperienceDuration } from "@/utils/getExperienceDuration";
 
 const Objective = () => {
+  const totalExperience = getExperienceDuration()
   return (
     <>
       <Fragment key="objective-section">
@@ -32,7 +34,7 @@ const Objective = () => {
                 exit={{ y: 20, opacity: 0 }}
                 className="text-sm md:text-base text-lightSecondary dark:text-darkSecondary mb-3 px-6 lg:px-0 text-justify"
               >
-                Hello I&apos;m a Software Engineer with 3.5+ years of experience building modern, production-ready web 
+                Hello I&apos;m a Software Engineer with {totalExperience}+ years of experience building modern, production-ready web 
                 applications using React.js, Next.js, TypeScript, Svelte, and Tailwind CSS. I enjoy 
                 creating scalable frontend systems, crafting smooth user experiences, and turning complex 
                 product requirements into clean and maintainable interfaces. My work focuses on performance, 
