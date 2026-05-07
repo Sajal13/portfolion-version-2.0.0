@@ -87,7 +87,7 @@ export const services: Array<Service> = [
     id: 5,
     title: 'OTT Platform Design',
     description: `Building modern OTT platforms using Next.js, React.js, and Video.js with responsive UI, smooth video streaming, and scalable frontend architecture. Experienced in integrating Google Ads, content-focused layouts, and performance optimization to deliver seamless entertainment experiences across all devices.`,
-    imageSrc: '/assets/images/services/ott.jpeg'
+    imageSrc: '/assets/images/service/ott.jpeg'
   }
 ];
 
