@@ -9,18 +9,25 @@ type Props = {
   duration: number;
   prefix?: string;
   suffix?: string;
-  decimal?: number;
+  decimalPlaces?: number;
 };
 
-const Countup = ({ start, end, duration, prefix, suffix, decimal }: Props) => {
+const Countup = ({
+  start,
+  end,
+  duration,
+  prefix,
+  suffix,
+  decimalPlaces
+}: Props) => {
   return (
     <CountUp
       start={start}
       end={end}
       duration={duration}
-      prefix={prefix ? prefix : ""}
-      suffix={suffix ? suffix : ""}
-      decimal={decimals}
+      prefix={prefix ?? ""}
+      suffix={suffix ?? ""}
+      decimals={decimalPlaces ?? 0}
     />
   );
 };

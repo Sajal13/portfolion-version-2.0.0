@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -6,8 +6,11 @@ import { FaFacebookF } from "react-icons/fa";
 import { RiLinkedinFill } from "react-icons/ri";
 import { FaGithubAlt } from "react-icons/fa";
 import Countup from "@/components/shared/Countup";
+import { getExperienceDuration } from "@/utils/getExperienceDuration";
 
 const HomeContainer = () => {
+  const totalExperience = getExperienceDuration();
+  
   return (
     <AnimatePresence>
       <main className="">
@@ -154,7 +157,13 @@ const HomeContainer = () => {
           </div>
           <div className="text-center border-r border-r-[#dee2e6] w-full flex flex-col justify-between">
             <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary mb-2 md:mb-1.5">
-              <Countup start={0} end={3.5} suffix="+" decimal={1} duration={4} />
+              <Countup
+                start={0}
+                end={totalExperience}
+                suffix="+"
+                decimalPlaces={1}
+                duration={4}
+              />
             </h2>
             <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm md:leading-[1.5] tracking-[0.6px]">
               Years of Experience
