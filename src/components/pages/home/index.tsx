@@ -48,7 +48,7 @@ const HomeContainer = () => {
                   </motion.button>
                 </Link>
                 <Link
-                  href={"/assets/pdf/Sajal-Das-Front-End-Developer.pdf"}
+                  href={"/assets/pdf/Sajal-Das-Software-Engineer.pdf"}
                   download={true}
                   target="_blank"
                 >
@@ -146,7 +146,7 @@ const HomeContainer = () => {
         >
           <div className="text-center border-r border-r-[#dee2e6] w-full flex flex-col justify-between">
             <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary mb-2 md:mb-1.5">
-              <Countup start={0} end={13} duration={8} suffix="+" />
+              <Countup start={0} end={15} duration={8} suffix="+" />
             </h2>
             <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm md:leading-[1.5] tracking-[0.6px]">
               Project <br className="md:hidden" /> Completed
@@ -154,7 +154,7 @@ const HomeContainer = () => {
           </div>
           <div className="text-center border-r border-r-[#dee2e6] w-full flex flex-col justify-between">
             <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary mb-2 md:mb-1.5">
-              <Countup start={0} end={3} duration={4} />
+              <Countup start={0} end={3.5} suffix="+" duration={4} />
             </h2>
             <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm md:leading-[1.5] tracking-[0.6px]">
               Years of Experience
@@ -162,7 +162,7 @@ const HomeContainer = () => {
           </div>
           <div className="text-center w-full flex flex-col justify-between">
             <h2 className="text-xl md:text-[2rem] font-medium leading-[1.2] text-lightSecondary dark:text-darkSecondary mb-2 md:mb-1.5">
-              <Countup start={0} end={5} duration={5} suffix="+" />
+              <Countup start={0} end={7} duration={5} suffix="+" />
             </h2>
             <p className="text-[#495057]/70 dark:text-[#f2f2f2]/70 text-[13px] md:text-sm leading-[1.5] tracking-[0.6px]">
               Happy <br className="md:hidden" /> Clients

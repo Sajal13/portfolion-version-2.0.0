@@ -17,29 +17,37 @@ export const timelineItems: Array<Timelines> = [
       "Graduated from here in 2022. Completed Bachelor in Technology major in Computer Sciecnce and Engineering.",
     type: 1
   },
-  // {
-  //   id: 5,
-  //   title: "Evocation IT",
-  //   duration: "Oct 2022 - Jan 2023 (Contratual)",
-  //   description: `Working Contractually on different project for clients as a Front-End Developer. Technology used 
-  //   (ReactJs, Nextjs, TailwindCSS, MaterialUI).`,
-  //   type: 2
-  // },
-  // {
-  //   id: 3,
-  //   title: "InNeed Intelligence Cloud, Dhaka",
-  //   duration: "Jan 2023 - Dec 2023",
-  //   description: `Joined InNeed Intellignece Cloud as a Junior Front-End Developer. Worked on different client.
-  //   Technology used (Svelte, Sveltkit, Astro, VueJs, TailwindCSS, Vuetify).
-  //   `,
-  //   type: 2
-  // },
+  {
+    id: 3,
+    title: "Evocation IT",
+    duration: "Oct 2022 - Jan 2023 (Contratual)",
+    description: `Working Contractually on different project for clients as a Front-End Developer. Technology used 
+    (ReactJs, Nextjs, TailwindCSS, MaterialUI).`,
+    type: 2
+  },
   {
     id: 4,
+    title: "InNeed Intelligence Cloud, Dhaka",
+    duration: "Jan 2023 - Dec 2023",
+    description: `Joined InNeed Intellignece Cloud as a Junior Front-End Developer. Worked on different client.
+    Technology used (Svelte, Sveltkit, Astro, VueJs, TailwindCSS, Vuetify).
+    `,
+    type: 2
+  },
+  {
+    id: 5,
     title: "Technext It Limited",
-    duration: "June 2023 - Present",
-    description: `Joined TechnextIt as a Junior Front-End Developer. Working on Template Designing for Bootstrap Marketplace.
+    duration: "Jan 2024 - Mar 2026",
+    description: `Joined TechnextIt as a Front-End Developer. Working on Template Designing for Bootstrap Marketplace.
     Technology uses (Pug, SCSS, Bootstrap 5, ReactJs, MaterialUI and Other technologies)`,
+    type: 2
+  },
+  {
+    id: 6,
+    title: 'Rockstreamer',
+    duration: 'April 2026 - Currently Working',
+    description: `Currenlty working as a Software Engineer. The daily works involvs, videojs, OTT Platform 
+    streaming, CMS Building for OTT Platform, using Nextjs, ReactJs, Tailwindcss, Styled Component and css.`,
     type: 2
   }
 ];
@@ -74,6 +82,12 @@ export const services: Array<Service> = [
     description: `Specializing in WordPress website design, I craft visually appealing websites tailored to your brand. Let's collaborate 
     to build a stunning WordPress website that represents your brand and achieves your goals.`,
     imageSrc: "/assets/images/service/wordpress.webp"
+  },
+  {
+    id: 5,
+    title: 'OTT Platform Design',
+    description: `Building modern OTT platforms using Next.js, React.js, and Video.js with responsive UI, smooth video streaming, and scalable frontend architecture. Experienced in integrating Google Ads, content-focused layouts, and performance optimization to deliver seamless entertainment experiences across all devices.`,
+    imageSrc: '/assets/images/services/ott.jpeg'
   }
 ];
 

@@ -32,28 +32,14 @@ const Objective = () => {
                 exit={{ y: 20, opacity: 0 }}
                 className="text-sm md:text-base text-lightSecondary dark:text-darkSecondary mb-3 px-6 lg:px-0 text-justify"
               >
-                Hello I&apos;m Sajal das a passionate Front-End Developer
-                committed to creating seamless and user-friendly web
-                experiences. With a degree in web development and hands-on
-                experience with HTML, CSS, JavaScript, and modern frameworks
-                like ReactJS and Next.js, Vue.js, SvelteJs Astro.js,
-              </motion.p>
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                exit={{ y: 20, opacity: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="text-sm md:text-base text-lightSecondary dark:text-darkSecondary mb-5 px-6 lg:px-0 text-justify"
-              >
-                I specialize in building fast, responsive, and visually stunning
-                web applications. Having collaborated with diverse teams and
-                immersed myself in cutting-edge technologies, I bring a blend of
-                creativity and technical expertise to every project. Let&apos;s
-                work together to bring your digital vision to life. Reach out,
-                and let&apos;s shape the future of the web together!
+                Hello I&apos;m a Software Engineer with 3.5+ years of experience building modern, production-ready web 
+                applications using React.js, Next.js, TypeScript, Svelte, and Tailwind CSS. I enjoy 
+                creating scalable frontend systems, crafting smooth user experiences, and turning complex 
+                product requirements into clean and maintainable interfaces. My work focuses on performance, 
+                accessibility, reusable architecture, and building applications that feel reliable in real-world use.
               </motion.p>
               <Link
-                href={"/assets/pdf/Sajal-Das-Front-End-Developer.pdf"}
+                href={"/assets/pdf/Sajal-Das-Software-Engineer.pdf"}
                 download={true}
                 target="_blank"
               >

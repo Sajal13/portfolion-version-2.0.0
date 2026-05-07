@@ -8,11 +8,11 @@ import Preloader from "@/components/shared/Preloader";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Sajal Das || Front-End Developer Portfolio",
-    template: "%s | Sajal Das || Front-End Developer Portfolio",
+    absolute: "Sajal Das || Software Engineer Portfolio",
+    template: "%s | Sajal Das || Software Engineer Portfolio",
   },
-  description: "Explore the professional portfolio of Sajal Das, a skilled Front-End Developer with expertise in React, Next.js, JavaScript, and modern web technologies. Discover projects, case studies, and the creative journey of a developer passionate about building responsive, user-friendly web applications.",
-  keywords: 'Sajal Das, Front-End Developer, React Developer, Next.js, JavaScript, Portfolio, Web Development, Responsive Design, Modern Web Technologies, HTML, CSS, TypeScript, SCSS, Tailwind CSS, Git, GitHub, Node.js, MongoDB, Firebase'
+  description: "Explore the professional portfolio of Sajal Das, a skilled Software Engineer with expertise in React, Next.js, JavaScript, and modern web technologies. Discover projects, case studies, and the creative journey of a developer passionate about building responsive, user-friendly web applications.",
+  keywords: 'Sajal Das, Software Engineer, React Developer, Next.js, JavaScript, Portfolio, Web Development, Responsive Design, Modern Web Technologies, HTML, CSS, TypeScript, SCSS, Tailwind CSS, Git, GitHub, Node.js, MongoDB, Firebase'
 };
 
 export default function RootLayout({
